@@ -1,0 +1,88 @@
+{
+    "RepositoryName": "pk007sheep",
+    "RepositoryDescription": "Repo for misaka",
+    "RepositoryAuthor": "SHUN",
+    "RepositoryIcon": "https://raw.githubusercontent.com/pk007sheep/repo/main/images/avatar.animes.mickey.png",
+    "RepositoryWebsite": "https://github.com/pk007sheep/repo",
+    "DefaultHeaderImage": "https://raw.githubusercontent.com/pk007sheep/repo/main/images/wallpaper.shun.sign.png",
+    "RepositoryContents": [
+        {
+            "Name": "字型小工具",
+            "Description": "iOS、時鐘、鍵盤、Emoji...等字型",
+            "Author": {
+                "Label": "SHUN",
+                "Links": [
+                    {
+                        "Label": "SHUN",
+                        "Link": "https://github.com/pk007sheep/repo"
+                    }
+                ]
+            },
+            "Icon": "https://raw.githubusercontent.com/pk007sheep/repo/main/images/icon/fonts.png",
+            "HeaderImage": "https://raw.githubusercontent.com/pk007sheep/repo/main/images/wallpaper.shun.sign.png",
+            "Category": "Fonts",
+            "Caption": "測試環境：iOS15.4.1",
+            "Screenshot": ["https://raw.githubusercontent.com/pk007sheep/repo/main/images/screenshot/misaka.fonts.png"],
+            "Releases": [
+                {
+                    "Version": "1.0",
+                    "Package": "https://raw.githubusercontent.com/pk007sheep/repo/main/packages/com.shun.fonts.misaka",
+                    "Description": "First release"
+                }
+            ],
+            "PackageID": "com.shun.fonts"
+        },
+        {
+            "Name": "系統小工具",
+            "Description": "隱藏一些細節",
+            "Author": {
+                "Label": "SHUN",
+                "Links": [
+                    {
+                        "Label": "SHUN",
+                        "Link": "https://github.com/pk007sheep/repo"
+                    }
+                ]
+            },
+            "Icon": "https://raw.githubusercontent.com/pk007sheep/repo/main/images/icon/apple.png",
+            "HeaderImage": "https://raw.githubusercontent.com/pk007sheep/repo/main/images/wallpaper.shun.sign.png",
+            "Category": "Tweaks",
+            "Caption": "測試環境：iOS15.4.1",
+            "Screenshot": ["https://raw.githubusercontent.com/pk007sheep/repo/main/images/screenshot/misaka.system.png"],
+            "Releases": [
+                {
+                    "Version": "1.0",
+                    "Package": "https://raw.githubusercontent.com/pk007sheep/repo/main/packages/com.shun.system.misaka",
+                    "Description": "First release"
+                }
+            ],
+            "PackageID": "com.shun.system"
+        },
+        {
+            "Name": "LINE小工具",
+            "Description": "換鈴聲、提示音",
+            "Author": {
+                "Label": "SHUN",
+                "Links": [
+                    {
+                        "Label": "SHUN",
+                        "Link": "https://github.com/pk007sheep/repo"
+                    }
+                ]
+            },
+            "Icon": "https://raw.githubusercontent.com/pk007sheep/repo/main/images/icon/line.png",
+            "HeaderImage": "https://raw.githubusercontent.com/pk007sheep/repo/main/images/wallpaper.shun.sign.png",
+            "Category": "Fonts",
+            "Caption": "測試環境：iOS15.4.1",
+            "Screenshot": ["https://raw.githubusercontent.com/pk007sheep/repo/main/images/screenshot/misaka.line.notify.png"],
+            "Releases": [
+                {
+                    "Version": "1.0",
+                    "Package": "https://raw.githubusercontent.com/pk007sheep/repo/main/packages/com.shun.line.notify.misaka",
+                    "Description": "First release"
+                }
+            ],
+            "PackageID": "com.shun.line.notify"
+        }
+    ]
+}
