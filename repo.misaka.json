@@ -44,7 +44,7 @@
                     }
                 ]
             },
-            "Icon": "https://raw.githubusercontent.com/pk007sheep/repo/main/images/icon/apple.png",
+            "Icon": "https://raw.githubusercontent.com/pk007sheep/repo/main/images/icon/tweaks.png",
             "HeaderImage": "https://raw.githubusercontent.com/pk007sheep/repo/main/images/shun.sign.bg.no.png",
             "Category": "Tweaks",
             "Caption": "測試環境：iOS15.4.1",
@@ -72,7 +72,7 @@
             },
             "Icon": "https://raw.githubusercontent.com/pk007sheep/repo/main/images/icon/line.png",
             "HeaderImage": "https://raw.githubusercontent.com/pk007sheep/repo/main/images/shun.sign.bg.no.png",
-            "Category": "Fonts",
+            "Category": "LINE",
             "Caption": "測試環境：iOS15.4.1",
             "Screenshot": ["https://raw.githubusercontent.com/pk007sheep/repo/main/images/screenshot/misaka.line.notify.png"],
             "Releases": [
