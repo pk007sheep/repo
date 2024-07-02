@@ -48,15 +48,15 @@
             "HeaderImage": "https://raw.githubusercontent.com/pk007sheep/repo/main/images/shun.sign.bg.no.png",
             "Category": "Tweaks",
             "Caption": "測試環境：iOS15.4.1",
-            "Screenshot": ["https://raw.githubusercontent.com/pk007sheep/repo/main/images/screenshot/misaka.system.png"],
+            "Screenshot": ["https://raw.githubusercontent.com/pk007sheep/repo/main/images/screenshot/misaka.tweaks.png"],
             "Releases": [
                 {
                     "Version": "1.0",
-                    "Package": "https://raw.githubusercontent.com/pk007sheep/repo/main/packages/com.shun.system.misaka",
+                    "Package": "https://raw.githubusercontent.com/pk007sheep/repo/main/packages/com.shun.tweaks.misaka",
                     "Description": "First release"
                 }
             ],
-            "PackageID": "com.shun.system"
+            "PackageID": "com.shun.tweaks"
         },
         {
             "Name": "LINE小工具",
