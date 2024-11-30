@@ -1,403 +1,347 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1, viewport-fit=cover" />
-<meta name="description" content="HTML Color">
-<title>HTML Color</title>
-<style type="text/css">
-body { display:flex; flex-flow:column nowrap; gap:5px; justify-content:flex-start; align-items:flex-start; margin:0; padding:0; width:100vw; height:100vh; font-size:15px; overflow-x:hidden; overflow-y:auto; }
-.colorSection { display:flex; flex-flow:column wrap; gap:1px; justify-content:flex-start; align-content:flex-start; align-items:flex-start; margin:0; padding:0; width:100%; }
-.colorGrayscale, .colorName { height:3em; }
-.colorAll { height:18em; }
-.colorSection>div { display:flex; flex-flow:column nowrap; gap:0; justify-content:flex-end; margin:0; padding:0; }
-.colorGrayscale>div,.colorName>div { flex:0 0 3em; width:5.5%; }
-.colorAll>div { flex:0 0 16.3%; width:5.5%; }
-.colorName>div>small:first-of-type { text-shadow: 1px 1px 1px rgba(0,0,0,1),1px -1px 1px rgba(0,0,0,1),-1px 1px 1px rgba(0,0,0,1),-1px -1px 1px rgba(0,0,0,1) }
-</style>
-</head>
-<body>
-<section class="colorSection colorGrayscale">
-<div style="background-color:#000"><small>#000</small><small><span>0</span>,<span>0</span>,<span>0</span></small></div>
-<div style="background-color:#111"><small>#111</small><small><span>17</span>,<span>17</span>,<span>17</span></small></div>
-<div style="background-color:#222"><small>#222</small><small><span>34</span>,<span>34</span>,<span>34</span></small></div>
-<div style="background-color:#333"><small>#333</small><small><span>51</span>,<span>51</span>,<span>51</span></small></div>
-<div style="background-color:#444"><small>#444</small><small><span>68</span>,<span>68</span>,<span>68</span></small></div>
-<div style="background-color:#555"><small>#555</small><small><span>85</span>,<span>85</span>,<span>85</span></small></div>
-<div style="background-color:#666"><small>#666</small><small><span>102</span>,<span>102</span>,<span>102</span></small></div>
-<div style="background-color:#777"><small>#777</small><small><span>119</span>,<span>119</span>,<span>119</span></small></div>
-<div style="background-color:#888"><small>#888</small><small><span>136</span>,<span>136</span>,<span>136</span></small></div>
-<div style="background-color:#999"><small>#999</small><small><span>153</span>,<span>153</span>,<span>153</span></small></div>
-<div style="background-color:#AAA"><small>#AAA</small><small><span>170</span>,<span>170</span>,<span>170</span></small></div>
-<div style="background-color:#BBB"><small>#BBB</small><small><span>187</span>,<span>187</span>,<span>187</span></small></div>
-<div style="background-color:#CCC"><small>#CCC</small><small><span>204</span>,<span>204</span>,<span>204</span></small></div>
-<div style="background-color:#DDD"><small>#DDD</small><small><span>221</span>,<span>221</span>,<span>221</span></small></div>
-<div style="background-color:#EEE"><small>#EEE</small><small><span>238</span>,<span>238</span>,<span>238</span></small></div>
-<div style="background-color:#FFF"><small>#FFF</small><small><span>255</span>,<span>255</span>,<span>255</span></small></div>
-<div></div><div></div>
-</section>
-<section class="colorSection colorAll">
-<div style="background-color:#000"><small>#000</small><small><span>0</span>,<span>0</span>,<span>0</span></small></div>
-<div style="background-color:#003"><small>#003</small><small><span>0</span>,<span>0</span>,<span>51</span></small></div>
-<div style="background-color:#006"><small>#006</small><small><span>0</span>,<span>0</span>,<span>102</span></small></div>
-<div style="background-color:#009"><small>#009</small><small><span>0</span>,<span>0</span>,<span>153</span></small></div>
-<div style="background-color:#00C"><small>#00C</small><small><span>0</span>,<span>0</span>,<span>204</span></small></div>
-<div style="background-color:#00F"><small>#00F</small><small><span>0</span>,<span>0</span>,<span>255</span></small></div>
-<div style="background-color:#030"><small>#030</small><small><span>0</span>,<span>51</span>,<span>0</span></small></div>
-<div style="background-color:#033"><small>#033</small><small><span>0</span>,<span>51</span>,<span>51</span></small></div>
-<div style="background-color:#036"><small>#036</small><small><span>0</span>,<span>51</span>,<span>102</span></small></div>
-<div style="background-color:#039"><small>#039</small><small><span>0</span>,<span>51</span>,<span>153</span></small></div>
-<div style="background-color:#03C"><small>#03C</small><small><span>0</span>,<span>51</span>,<span>204</span></small></div>
-<div style="background-color:#03F"><small>#03F</small><small><span>0</span>,<span>51</span>,<span>255</span></small></div>
-<div style="background-color:#060"><small>#060</small><small><span>0</span>,<span>102</span>,<span>0</span></small></div>
-<div style="background-color:#063"><small>#063</small><small><span>0</span>,<span>102</span>,<span>51</span></small></div>
-<div style="background-color:#066"><small>#066</small><small><span>0</span>,<span>102</span>,<span>102</span></small></div>
-<div style="background-color:#069"><small>#069</small><small><span>0</span>,<span>102</span>,<span>153</span></small></div>
-<div style="background-color:#06C"><small>#06C</small><small><span>0</span>,<span>102</span>,<span>204</span></small></div>
-<div style="background-color:#06F"><small>#06F</small><small><span>0</span>,<span>102</span>,<span>255</span></small></div>
-<div style="background-color:#090"><small>#090</small><small><span>0</span>,<span>153</span>,<span>0</span></small></div>
-<div style="background-color:#093"><small>#093</small><small><span>0</span>,<span>153</span>,<span>51</span></small></div>
-<div style="background-color:#096"><small>#096</small><small><span>0</span>,<span>153</span>,<span>102</span></small></div>
-<div style="background-color:#099"><small>#099</small><small><span>0</span>,<span>153</span>,<span>153</span></small></div>
-<div style="background-color:#09C"><small>#09C</small><small><span>0</span>,<span>153</span>,<span>204</span></small></div>
-<div style="background-color:#09F"><small>#09F</small><small><span>0</span>,<span>153</span>,<span>255</span></small></div>
-<div style="background-color:#0C0"><small>#0C0</small><small><span>0</span>,<span>204</span>,<span>0</span></small></div>
-<div style="background-color:#0C3"><small>#0C3</small><small><span>0</span>,<span>204</span>,<span>51</span></small></div>
-<div style="background-color:#0C6"><small>#0C6</small><small><span>0</span>,<span>204</span>,<span>102</span></small></div>
-<div style="background-color:#0C9"><small>#0C9</small><small><span>0</span>,<span>204</span>,<span>153</span></small></div>
-<div style="background-color:#0CC"><small>#0CC</small><small><span>0</span>,<span>204</span>,<span>204</span></small></div>
-<div style="background-color:#0CF"><small>#0CF</small><small><span>0</span>,<span>204</span>,<span>255</span></small></div>
-<div style="background-color:#0F0"><small>#0F0</small><small><span>0</span>,<span>255</span>,<span>0</span></small></div>
-<div style="background-color:#0F3"><small>#0F3</small><small><span>0</span>,<span>255</span>,<span>51</span></small></div>
-<div style="background-color:#0F6"><small>#0F6</small><small><span>0</span>,<span>255</span>,<span>102</span></small></div>
-<div style="background-color:#0F9"><small>#0F9</small><small><span>0</span>,<span>255</span>,<span>153</span></small></div>
-<div style="background-color:#0FC"><small>#0FC</small><small><span>0</span>,<span>255</span>,<span>204</span></small></div>
-<div style="background-color:#0FF"><small>#0FF</small><small><span>0</span>,<span>255</span>,<span>255</span></small></div>
-<div style="background-color:#300"><small>#300</small><small><span>51</span>,<span>0</span>,<span>0</span></small></div>
-<div style="background-color:#303"><small>#303</small><small><span>51</span>,<span>0</span>,<span>51</span></small></div>
-<div style="background-color:#306"><small>#306</small><small><span>51</span>,<span>0</span>,<span>102</span></small></div>
-<div style="background-color:#309"><small>#309</small><small><span>51</span>,<span>0</span>,<span>153</span></small></div>
-<div style="background-color:#30C"><small>#30C</small><small><span>51</span>,<span>0</span>,<span>204</span></small></div>
-<div style="background-color:#30F"><small>#30F</small><small><span>51</span>,<span>0</span>,<span>255</span></small></div>
-<div style="background-color:#330"><small>#330</small><small><span>51</span>,<span>51</span>,<span>0</span></small></div>
-<div style="background-color:#333"><small>#333</small><small><span>51</span>,<span>51</span>,<span>51</span></small></div>
-<div style="background-color:#336"><small>#336</small><small><span>51</span>,<span>51</span>,<span>102</span></small></div>
-<div style="background-color:#339"><small>#339</small><small><span>51</span>,<span>51</span>,<span>153</span></small></div>
-<div style="background-color:#33C"><small>#33C</small><small><span>51</span>,<span>51</span>,<span>204</span></small></div>
-<div style="background-color:#33F"><small>#33F</small><small><span>51</span>,<span>51</span>,<span>255</span></small></div>
-<div style="background-color:#360"><small>#360</small><small><span>51</span>,<span>102</span>,<span>0</span></small></div>
-<div style="background-color:#363"><small>#363</small><small><span>51</span>,<span>102</span>,<span>51</span></small></div>
-<div style="background-color:#366"><small>#366</small><small><span>51</span>,<span>102</span>,<span>102</span></small></div>
-<div style="background-color:#369"><small>#369</small><small><span>51</span>,<span>102</span>,<span>153</span></small></div>
-<div style="background-color:#36C"><small>#36C</small><small><span>51</span>,<span>102</span>,<span>204</span></small></div>
-<div style="background-color:#36F"><small>#36F</small><small><span>51</span>,<span>102</span>,<span>255</span></small></div>
-<div style="background-color:#390"><small>#390</small><small><span>51</span>,<span>153</span>,<span>0</span></small></div>
-<div style="background-color:#393"><small>#393</small><small><span>51</span>,<span>153</span>,<span>51</span></small></div>
-<div style="background-color:#396"><small>#396</small><small><span>51</span>,<span>153</span>,<span>102</span></small></div>
-<div style="background-color:#399"><small>#399</small><small><span>51</span>,<span>153</span>,<span>153</span></small></div>
-<div style="background-color:#39C"><small>#39C</small><small><span>51</span>,<span>153</span>,<span>204</span></small></div>
-<div style="background-color:#39F"><small>#39F</small><small><span>51</span>,<span>153</span>,<span>255</span></small></div>
-<div style="background-color:#3C0"><small>#3C0</small><small><span>51</span>,<span>204</span>,<span>0</span></small></div>
-<div style="background-color:#3C3"><small>#3C3</small><small><span>51</span>,<span>204</span>,<span>51</span></small></div>
-<div style="background-color:#3C6"><small>#3C6</small><small><span>51</span>,<span>204</span>,<span>102</span></small></div>
-<div style="background-color:#3C9"><small>#3C9</small><small><span>51</span>,<span>204</span>,<span>153</span></small></div>
-<div style="background-color:#3CC"><small>#3CC</small><small><span>51</span>,<span>204</span>,<span>204</span></small></div>
-<div style="background-color:#3CF"><small>#3CF</small><small><span>51</span>,<span>204</span>,<span>255</span></small></div>
-<div style="background-color:#3F0"><small>#3F0</small><small><span>51</span>,<span>255</span>,<span>0</span></small></div>
-<div style="background-color:#3F3"><small>#3F3</small><small><span>51</span>,<span>255</span>,<span>51</span></small></div>
-<div style="background-color:#3F6"><small>#3F6</small><small><span>51</span>,<span>255</span>,<span>102</span></small></div>
-<div style="background-color:#3F9"><small>#3F9</small><small><span>51</span>,<span>255</span>,<span>153</span></small></div>
-<div style="background-color:#3FC"><small>#3FC</small><small><span>51</span>,<span>255</span>,<span>204</span></small></div>
-<div style="background-color:#3FF"><small>#3FF</small><small><span>51</span>,<span>255</span>,<span>255</span></small></div>
-<div style="background-color:#600"><small>#600</small><small><span>102</span>,<span>0</span>,<span>0</span></small></div>
-<div style="background-color:#603"><small>#603</small><small><span>102</span>,<span>0</span>,<span>51</span></small></div>
-<div style="background-color:#606"><small>#606</small><small><span>102</span>,<span>0</span>,<span>102</span></small></div>
-<div style="background-color:#609"><small>#609</small><small><span>102</span>,<span>0</span>,<span>153</span></small></div>
-<div style="background-color:#60C"><small>#60C</small><small><span>102</span>,<span>0</span>,<span>204</span></small></div>
-<div style="background-color:#60F"><small>#60F</small><small><span>102</span>,<span>0</span>,<span>255</span></small></div>
-<div style="background-color:#630"><small>#630</small><small><span>102</span>,<span>51</span>,<span>0</span></small></div>
-<div style="background-color:#633"><small>#633</small><small><span>102</span>,<span>51</span>,<span>51</span></small></div>
-<div style="background-color:#636"><small>#636</small><small><span>102</span>,<span>51</span>,<span>102</span></small></div>
-<div style="background-color:#639"><small>#639</small><small><span>102</span>,<span>51</span>,<span>153</span></small></div>
-<div style="background-color:#63C"><small>#63C</small><small><span>102</span>,<span>51</span>,<span>204</span></small></div>
-<div style="background-color:#63F"><small>#63F</small><small><span>102</span>,<span>51</span>,<span>255</span></small></div>
-<div style="background-color:#660"><small>#660</small><small><span>102</span>,<span>102</span>,<span>0</span></small></div>
-<div style="background-color:#663"><small>#663</small><small><span>102</span>,<span>102</span>,<span>51</span></small></div>
-<div style="background-color:#666"><small>#666</small><small><span>102</span>,<span>102</span>,<span>102</span></small></div>
-<div style="background-color:#669"><small>#669</small><small><span>102</span>,<span>102</span>,<span>153</span></small></div>
-<div style="background-color:#66C"><small>#66C</small><small><span>102</span>,<span>102</span>,<span>204</span></small></div>
-<div style="background-color:#66F"><small>#66F</small><small><span>102</span>,<span>102</span>,<span>255</span></small></div>
-<div style="background-color:#690"><small>#690</small><small><span>102</span>,<span>153</span>,<span>0</span></small></div>
-<div style="background-color:#693"><small>#693</small><small><span>102</span>,<span>153</span>,<span>51</span></small></div>
-<div style="background-color:#696"><small>#696</small><small><span>102</span>,<span>153</span>,<span>102</span></small></div>
-<div style="background-color:#699"><small>#699</small><small><span>102</span>,<span>153</span>,<span>153</span></small></div>
-<div style="background-color:#69C"><small>#69C</small><small><span>102</span>,<span>153</span>,<span>204</span></small></div>
-<div style="background-color:#69F"><small>#69F</small><small><span>102</span>,<span>153</span>,<span>255</span></small></div>
-<div style="background-color:#6C0"><small>#6C0</small><small><span>102</span>,<span>204</span>,<span>0</span></small></div>
-<div style="background-color:#6C3"><small>#6C3</small><small><span>102</span>,<span>204</span>,<span>51</span></small></div>
-<div style="background-color:#6C6"><small>#6C6</small><small><span>102</span>,<span>204</span>,<span>102</span></small></div>
-<div style="background-color:#6C9"><small>#6C9</small><small><span>102</span>,<span>204</span>,<span>153</span></small></div>
-<div style="background-color:#6CC"><small>#6CC</small><small><span>102</span>,<span>204</span>,<span>204</span></small></div>
-<div style="background-color:#6CF"><small>#6CF</small><small><span>102</span>,<span>204</span>,<span>255</span></small></div>
-<div style="background-color:#6F0"><small>#6F0</small><small><span>102</span>,<span>255</span>,<span>0</span></small></div>
-<div style="background-color:#6F3"><small>#6F3</small><small><span>102</span>,<span>255</span>,<span>51</span></small></div>
-<div style="background-color:#6F6"><small>#6F6</small><small><span>102</span>,<span>255</span>,<span>102</span></small></div>
-<div style="background-color:#6F9"><small>#6F9</small><small><span>102</span>,<span>255</span>,<span>153</span></small></div>
-<div style="background-color:#6FC"><small>#6FC</small><small><span>102</span>,<span>255</span>,<span>204</span></small></div>
-<div style="background-color:#6FF"><small>#6FF</small><small><span>102</span>,<span>255</span>,<span>255</span></small></div>
-</section>
-<section class="colorSection colorAll">
-<div style="background-color:#900"><small>#900</small><small><span>153</span>,<span>0</span>,<span>0</span></small></div>
-<div style="background-color:#903"><small>#903</small><small><span>153</span>,<span>0</span>,<span>51</span></small></div>
-<div style="background-color:#906"><small>#906</small><small><span>153</span>,<span>0</span>,<span>102</span></small></div>
-<div style="background-color:#909"><small>#909</small><small><span>153</span>,<span>0</span>,<span>153</span></small></div>
-<div style="background-color:#90C"><small>#90C</small><small><span>153</span>,<span>0</span>,<span>204</span></small></div>
-<div style="background-color:#90F"><small>#90F</small><small><span>153</span>,<span>0</span>,<span>255</span></small></div>
-<div style="background-color:#930"><small>#930</small><small><span>153</span>,<span>51</span>,<span>0</span></small></div>
-<div style="background-color:#933"><small>#933</small><small><span>153</span>,<span>51</span>,<span>51</span></small></div>
-<div style="background-color:#936"><small>#936</small><small><span>153</span>,<span>51</span>,<span>102</span></small></div>
-<div style="background-color:#939"><small>#939</small><small><span>153</span>,<span>51</span>,<span>153</span></small></div>
-<div style="background-color:#93C"><small>#93C</small><small><span>153</span>,<span>51</span>,<span>204</span></small></div>
-<div style="background-color:#93F"><small>#93F</small><small><span>153</span>,<span>51</span>,<span>255</span></small></div>
-<div style="background-color:#960"><small>#960</small><small><span>153</span>,<span>102</span>,<span>0</span></small></div>
-<div style="background-color:#963"><small>#963</small><small><span>153</span>,<span>102</span>,<span>51</span></small></div>
-<div style="background-color:#966"><small>#966</small><small><span>153</span>,<span>102</span>,<span>102</span></small></div>
-<div style="background-color:#969"><small>#969</small><small><span>153</span>,<span>102</span>,<span>153</span></small></div>
-<div style="background-color:#96C"><small>#96C</small><small><span>153</span>,<span>102</span>,<span>204</span></small></div>
-<div style="background-color:#96F"><small>#96F</small><small><span>153</span>,<span>102</span>,<span>255</span></small></div>
-<div style="background-color:#990"><small>#990</small><small><span>153</span>,<span>153</span>,<span>0</span></small></div>
-<div style="background-color:#993"><small>#993</small><small><span>153</span>,<span>153</span>,<span>51</span></small></div>
-<div style="background-color:#996"><small>#996</small><small><span>153</span>,<span>153</span>,<span>102</span></small></div>
-<div style="background-color:#999"><small>#999</small><small><span>153</span>,<span>153</span>,<span>153</span></small></div>
-<div style="background-color:#99C"><small>#99C</small><small><span>153</span>,<span>153</span>,<span>204</span></small></div>
-<div style="background-color:#99F"><small>#99F</small><small><span>153</span>,<span>153</span>,<span>255</span></small></div>
-<div style="background-color:#9C0"><small>#9C0</small><small><span>153</span>,<span>204</span>,<span>0</span></small></div>
-<div style="background-color:#9C3"><small>#9C3</small><small><span>153</span>,<span>204</span>,<span>51</span></small></div>
-<div style="background-color:#9C6"><small>#9C6</small><small><span>153</span>,<span>204</span>,<span>102</span></small></div>
-<div style="background-color:#9C9"><small>#9C9</small><small><span>153</span>,<span>204</span>,<span>153</span></small></div>
-<div style="background-color:#9CC"><small>#9CC</small><small><span>153</span>,<span>204</span>,<span>204</span></small></div>
-<div style="background-color:#9CF"><small>#9CF</small><small><span>153</span>,<span>204</span>,<span>255</span></small></div>
-<div style="background-color:#9F0"><small>#9F0</small><small><span>153</span>,<span>255</span>,<span>0</span></small></div>
-<div style="background-color:#9F3"><small>#9F3</small><small><span>153</span>,<span>255</span>,<span>51</span></small></div>
-<div style="background-color:#9F6"><small>#9F6</small><small><span>153</span>,<span>255</span>,<span>102</span></small></div>
-<div style="background-color:#9F9"><small>#9F9</small><small><span>153</span>,<span>255</span>,<span>153</span></small></div>
-<div style="background-color:#9FC"><small>#9FC</small><small><span>153</span>,<span>255</span>,<span>204</span></small></div>
-<div style="background-color:#9FF"><small>#9FF</small><small><span>153</span>,<span>255</span>,<span>255</span></small></div>
-<div style="background-color:#C00"><small>#C00</small><small><span>204</span>,<span>0</span>,<span>0</span></small></div>
-<div style="background-color:#C03"><small>#C03</small><small><span>204</span>,<span>0</span>,<span>51</span></small></div>
-<div style="background-color:#C06"><small>#C06</small><small><span>204</span>,<span>0</span>,<span>102</span></small></div>
-<div style="background-color:#C09"><small>#C09</small><small><span>204</span>,<span>0</span>,<span>153</span></small></div>
-<div style="background-color:#C0C"><small>#C0C</small><small><span>204</span>,<span>0</span>,<span>204</span></small></div>
-<div style="background-color:#C0F"><small>#C0F</small><small><span>204</span>,<span>0</span>,<span>255</span></small></div>
-<div style="background-color:#C30"><small>#C30</small><small><span>204</span>,<span>51</span>,<span>0</span></small></div>
-<div style="background-color:#C33"><small>#C33</small><small><span>204</span>,<span>51</span>,<span>51</span></small></div>
-<div style="background-color:#C36"><small>#C36</small><small><span>204</span>,<span>51</span>,<span>102</span></small></div>
-<div style="background-color:#C39"><small>#C39</small><small><span>204</span>,<span>51</span>,<span>153</span></small></div>
-<div style="background-color:#C3C"><small>#C3C</small><small><span>204</span>,<span>51</span>,<span>204</span></small></div>
-<div style="background-color:#C3F"><small>#C3F</small><small><span>204</span>,<span>51</span>,<span>255</span></small></div>
-<div style="background-color:#C60"><small>#C60</small><small><span>204</span>,<span>102</span>,<span>0</span></small></div>
-<div style="background-color:#C63"><small>#C63</small><small><span>204</span>,<span>102</span>,<span>51</span></small></div>
-<div style="background-color:#C66"><small>#C66</small><small><span>204</span>,<span>102</span>,<span>102</span></small></div>
-<div style="background-color:#C69"><small>#C69</small><small><span>204</span>,<span>102</span>,<span>153</span></small></div>
-<div style="background-color:#C6C"><small>#C6C</small><small><span>204</span>,<span>102</span>,<span>204</span></small></div>
-<div style="background-color:#C6F"><small>#C6F</small><small><span>204</span>,<span>102</span>,<span>255</span></small></div>
-<div style="background-color:#C90"><small>#C90</small><small><span>204</span>,<span>153</span>,<span>0</span></small></div>
-<div style="background-color:#C93"><small>#C93</small><small><span>204</span>,<span>153</span>,<span>51</span></small></div>
-<div style="background-color:#C96"><small>#C96</small><small><span>204</span>,<span>153</span>,<span>102</span></small></div>
-<div style="background-color:#C99"><small>#C99</small><small><span>204</span>,<span>153</span>,<span>153</span></small></div>
-<div style="background-color:#C9C"><small>#C9C</small><small><span>204</span>,<span>153</span>,<span>204</span></small></div>
-<div style="background-color:#C9F"><small>#C9F</small><small><span>204</span>,<span>153</span>,<span>255</span></small></div>
-<div style="background-color:#CC0"><small>#CC0</small><small><span>204</span>,<span>204</span>,<span>0</span></small></div>
-<div style="background-color:#CC3"><small>#CC3</small><small><span>204</span>,<span>204</span>,<span>51</span></small></div>
-<div style="background-color:#CC6"><small>#CC6</small><small><span>204</span>,<span>204</span>,<span>102</span></small></div>
-<div style="background-color:#CC9"><small>#CC9</small><small><span>204</span>,<span>204</span>,<span>153</span></small></div>
-<div style="background-color:#CCC"><small>#CCC</small><small><span>204</span>,<span>204</span>,<span>204</span></small></div>
-<div style="background-color:#CCF"><small>#CCF</small><small><span>204</span>,<span>204</span>,<span>255</span></small></div>
-<div style="background-color:#CF0"><small>#CF0</small><small><span>204</span>,<span>255</span>,<span>0</span></small></div>
-<div style="background-color:#CF3"><small>#CF3</small><small><span>204</span>,<span>255</span>,<span>51</span></small></div>
-<div style="background-color:#CF6"><small>#CF6</small><small><span>204</span>,<span>255</span>,<span>102</span></small></div>
-<div style="background-color:#CF9"><small>#CF9</small><small><span>204</span>,<span>255</span>,<span>153</span></small></div>
-<div style="background-color:#CFC"><small>#CFC</small><small><span>204</span>,<span>255</span>,<span>204</span></small></div>
-<div style="background-color:#CFF"><small>#CFF</small><small><span>204</span>,<span>255</span>,<span>255</span></small></div>
-<div style="background-color:#F00"><small>#F00</small><small><span>255</span>,<span>0</span>,<span>0</span></small></div>
-<div style="background-color:#F03"><small>#F03</small><small><span>255</span>,<span>0</span>,<span>51</span></small></div>
-<div style="background-color:#F06"><small>#F06</small><small><span>255</span>,<span>0</span>,<span>102</span></small></div>
-<div style="background-color:#F09"><small>#F09</small><small><span>255</span>,<span>0</span>,<span>153</span></small></div>
-<div style="background-color:#F0C"><small>#F0C</small><small><span>255</span>,<span>0</span>,<span>204</span></small></div>
-<div style="background-color:#F0F"><small>#F0F</small><small><span>255</span>,<span>0</span>,<span>255</span></small></div>
-<div style="background-color:#F30"><small>#F30</small><small><span>255</span>,<span>51</span>,<span>0</span></small></div>
-<div style="background-color:#F33"><small>#F33</small><small><span>255</span>,<span>51</span>,<span>51</span></small></div>
-<div style="background-color:#F36"><small>#F36</small><small><span>255</span>,<span>51</span>,<span>102</span></small></div>
-<div style="background-color:#F39"><small>#F39</small><small><span>255</span>,<span>51</span>,<span>153</span></small></div>
-<div style="background-color:#F3C"><small>#F3C</small><small><span>255</span>,<span>51</span>,<span>204</span></small></div>
-<div style="background-color:#F3F"><small>#F3F</small><small><span>255</span>,<span>51</span>,<span>255</span></small></div>
-<div style="background-color:#F60"><small>#F60</small><small><span>255</span>,<span>102</span>,<span>0</span></small></div>
-<div style="background-color:#F63"><small>#F63</small><small><span>255</span>,<span>102</span>,<span>51</span></small></div>
-<div style="background-color:#F66"><small>#F66</small><small><span>255</span>,<span>102</span>,<span>102</span></small></div>
-<div style="background-color:#F69"><small>#F69</small><small><span>255</span>,<span>102</span>,<span>153</span></small></div>
-<div style="background-color:#F6C"><small>#F6C</small><small><span>255</span>,<span>102</span>,<span>204</span></small></div>
-<div style="background-color:#F6F"><small>#F6F</small><small><span>255</span>,<span>102</span>,<span>255</span></small></div>
-<div style="background-color:#F90"><small>#F90</small><small><span>255</span>,<span>153</span>,<span>0</span></small></div>
-<div style="background-color:#F93"><small>#F93</small><small><span>255</span>,<span>153</span>,<span>51</span></small></div>
-<div style="background-color:#F96"><small>#F96</small><small><span>255</span>,<span>153</span>,<span>102</span></small></div>
-<div style="background-color:#F99"><small>#F99</small><small><span>255</span>,<span>153</span>,<span>153</span></small></div>
-<div style="background-color:#F9C"><small>#F9C</small><small><span>255</span>,<span>153</span>,<span>204</span></small></div>
-<div style="background-color:#F9F"><small>#F9F</small><small><span>255</span>,<span>153</span>,<span>255</span></small></div>
-<div style="background-color:#FC0"><small>#FC0</small><small><span>255</span>,<span>204</span>,<span>0</span></small></div>
-<div style="background-color:#FC3"><small>#FC3</small><small><span>255</span>,<span>204</span>,<span>51</span></small></div>
-<div style="background-color:#FC6"><small>#FC6</small><small><span>255</span>,<span>204</span>,<span>102</span></small></div>
-<div style="background-color:#FC9"><small>#FC9</small><small><span>255</span>,<span>204</span>,<span>153</span></small></div>
-<div style="background-color:#FCC"><small>#FCC</small><small><span>255</span>,<span>204</span>,<span>204</span></small></div>
-<div style="background-color:#FCF"><small>#FCF</small><small><span>255</span>,<span>204</span>,<span>255</span></small></div>
-<div style="background-color:#FF0"><small>#FF0</small><small><span>255</span>,<span>255</span>,<span>0</span></small></div>
-<div style="background-color:#FF3"><small>#FF3</small><small><span>255</span>,<span>255</span>,<span>51</span></small></div>
-<div style="background-color:#FF6"><small>#FF6</small><small><span>255</span>,<span>255</span>,<span>102</span></small></div>
-<div style="background-color:#FF9"><small>#FF9</small><small><span>255</span>,<span>255</span>,<span>153</span></small></div>
-<div style="background-color:#FFC"><small>#FFC</small><small><span>255</span>,<span>255</span>,<span>204</span></small></div>
-<div style="background-color:#FFF"><small>#FFF</small><small><span>255</span>,<span>255</span>,<span>255</span></small></div>
-</section>
-<section class="colorSection colorName">
-<div style="background-color:Black; color:Black"><small>Black</small><small><span>0</span>,<span>0</span>,<span>0</span></small></div>
-<div style="background-color:Gainsboro; color:Gainsboro"><small>Gainsboro</small><small><span>220</span>,<span>220</span>,<span>220</span></small></div>
-<div style="background-color:LightGray; color:LightGray"><small>LightGray</small><small><span>211</span>,<span>211</span>,<span>211</span></small></div>
-<div style="background-color:DimGray; color:DimGray"><small>DimGray</small><small><span>105</span>,<span>105</span>,<span>105</span></small></div>
-<div style="background-color:Gray; color:Gray"><small>Gray</small><small><span>128</span>,<span>128</span>,<span>128</span></small></div>
-<div style="background-color:DarkGray; color:DarkGray"><small>DarkGray</small><small><span>169</span>,<span>169</span>,<span>169</span></small></div>
-<div style="background-color:Silver; color:Silver"><small>Silver</small><small><span>192</span>,<span>192</span>,<span>192</span></small></div>
-<div style="background-color:White; color:White"><small>White</small><small><span>255</span>,<span>255</span>,<span>255</span></small></div>
-<div style="background-color:Lavender; color:Lavender"><small>Lavender</small><small><span>230</span>,<span>230</span>,<span>250</span></small></div>
-<div style="background-color:LightSlateGray; color:LightSlateGray"><small>LightSlateGray</small><small><span>119</span>,<span>136</span>,<span>153</span></small></div>
-<div style="background-color:SlateGray; color:SlateGray"><small>SlateGray</small><small><span>112</span>,<span>128</span>,<span>144</span></small></div>
-</section>
-<section class="colorSection colorName">
-<div style="background-color:Olive; color:Olive"><small>Olive</small><small><span>128</span>,<span>128</span>,<span>0</span></small></div>
-<div style="background-color:PaleGoldenrod; color:PaleGoldenrod"><small>PaleGoldenrod</small><small><span>238</span>,<span>232</span>,<span>170</span></small></div>
-<div style="background-color:Khaki; color:Khaki"><small>Khaki</small><small><span>240</span>,<span>230</span>,<span>140</span></small></div>
-<div style="background-color:LightGoldenrodYellow; color:LightGoldenrodYellow"><small>LightGoldenrodYellow</small><small><span>250</span>,<span>250</span>,<span>210</span></small></div>
-<div style="background-color:PeachPuff; color:PeachPuff"><small>PeachPuff</small><small><span>255</span>,<span>218</span>,<span>185</span></small></div>
-<div style="background-color:Moccasin; color:Moccasin"><small>Moccasin</small><small><span>255</span>,<span>228</span>,<span>181</span></small></div>
-<div style="background-color:PapayaWhip; color:PapayaWhip"><small>PapayaWhip</small><small><span>255</span>,<span>239</span>,<span>213</span></small></div>
-<div style="background-color:LemonChiffon; color:LemonChiffon"><small>LemonChiffon</small><small><span>255</span>,<span>250</span>,<span>205</span></small></div>
-<div style="background-color:LightYellow; color:LightYellow"><small>LightYellow</small><small><span>255</span>,<span>255</span>,<span>224</span></small></div>
-<div style="background-color:Wheat; color:Wheat"><small>Wheat</small><small><span>245</span>,<span>222</span>,<span>179</span></small></div>
-<div style="background-color:NavajoWhite; color:NavajoWhite"><small>NavajoWhite</small><small><span>255</span>,<span>222</span>,<span>173</span></small></div>
-<div style="background-color:Bisque; color:Bisque"><small>Bisque</small><small><span>255</span>,<span>228</span>,<span>196</span></small></div>
-<div style="background-color:BlanchedAlmond; color:BlanchedAlmond"><small>BlanchedAlmond</small><small><span>255</span>,<span>235</span>,<span>205</span></small></div>
-<div style="background-color:Cornsilk; color:Cornsilk"><small>Cornsilk</small><small><span>255</span>,<span>248</span>,<span>220</span></small></div>
-<div style="background-color:SaddleBrown; color:SaddleBrown"><small>SaddleBrown</small><small><span>139</span>,<span>69</span>,<span>19</span></small></div>
-<div style="background-color:Peru; color:Peru"><small>Peru</small><small><span>205</span>,<span>133</span>,<span>63</span></small></div>
-<div style="background-color:Sienna; color:Sienna"><small>Sienna</small><small><span>160</span>,<span>82</span>,<span>45</span></small></div>
-<div style="background-color:Chocolate; color:Chocolate"><small>Chocolate</small><small><span>210</span>,<span>105</span>,<span>30</span></small></div>
-</section>
-<section class="colorSection colorName">
-<div style="background-color:Maroon; color:Maroon"><small>Maroon</small><small><span>128</span>,<span>0</span>,<span>0</span></small></div>
-<div style="background-color:DarkRed; color:DarkRed"><small>DarkRed</small><small><span>139</span>,<span>0</span>,<span>0</span></small></div>
-<div style="background-color:Brown; color:Brown"><small>Brown</small><small><span>165</span>,<span>42</span>,<span>42</span></small></div>
-<div style="background-color:FireBrick; color:FireBrick"><small>FireBrick</small><small><span>178</span>,<span>34</span>,<span>34</span></small></div>
-<div style="background-color:IndianRed; color:IndianRed"><small>IndianRed</small><small><span>205</span>,<span>92</span>,<span>92</span></small></div>
-<div style="background-color:LightCoral; color:LightCoral"><small>LightCoral</small><small><span>240</span>,<span>128</span>,<span>128</span></small></div>
-<div style="background-color:Crimson; color:Crimson"><small>Crimson</small><small><span>220</span>,<span>20</span>,<span>60</span></small></div>
-<div style="background-color:Pink; color:Pink"><small>Pink</small><small><span>255</span>,<span>192</span>,<span>203</span></small></div>
-<div style="background-color:LightPink; color:LightPink"><small>LightPink</small><small><span>255</span>,<span>182</span>,<span>193</span></small></div>
-<div style="background-color:PaleVioletRed; color:PaleVioletRed"><small>PaleVioletRed</small><small><span>219</span>,<span>112</span>,<span>147</span></small></div>
-<div style="background-color:HotPink; color:HotPink"><small>HotPink</small><small><span>255</span>,<span>105</span>,<span>180</span></small></div>
-<div style="background-color:DeepPink; color:DeepPink"><small>DeepPink</small><small><span>255</span>,<span>20</span>,<span>147</span></small></div>
-<div style="background-color:Magenta; color:Magenta"><small>Magenta</small><small><span>255</span>,<span>0</span>,<span>255</span></small></div>
-<div style="background-color:Fuchsia; color:Fuchsia"><small>Fuchsia</small><small><span>255</span>,<span>0</span>,<span>255</span></small></div>
-<div style="background-color:MediumVioletRed; color:MediumVioletRed"><small>MediumVioletRed</small><small><span>199</span>,<span>21</span>,<span>133</span></small></div>
-<div style="background-color:DarkMagenta; color:DarkMagenta"><small>DarkMagenta</small><small><span>139</span>,<span>0</span>,<span>139</span></small></div>
-<div style="background-color:Purple; color:Purple"><small>Purple</small><small><span>128</span>,<span>0</span>,<span>128</span></small></div>
-<div style="background-color:DarkViolet; color:DarkViolet"><small>DarkViolet</small><small><span>148</span>,<span>0</span>,<span>211</span></small></div>
-</section>
-<section class="colorSection colorName">
-<div style="background-color:Red; color:Red"><small>Red</small><small><span>255</span>,<span>0</span>,<span>0</span></small></div>
-<div style="background-color:OrangeRed; color:OrangeRed"><small>OrangeRed</small><small><span>255</span>,<span>69</span>,<span>0</span></small></div>
-<div style="background-color:Tomato; color:Tomato"><small>Tomato</small><small><span>255</span>,<span>99</span>,<span>71</span></small></div>
-<div style="background-color:Coral; color:Coral"><small>Coral</small><small><span>255</span>,<span>127</span>,<span>80</span></small></div>
-<div style="background-color:Salmon; color:Salmon"><small>Salmon</small><small><span>250</span>,<span>128</span>,<span>114</span></small></div>
-<div style="background-color:DarkSalmon; color:DarkSalmon"><small>DarkSalmon</small><small><span>233</span>,<span>150</span>,<span>122</span></small></div>
-<div style="background-color:LightSalmon; color:LightSalmon"><small>LightSalmon</small><small><span>255</span>,<span>160</span>,<span>122</span></small></div>
-<div style="background-color:SandyBrown; color:SandyBrown"><small>SandyBrown</small><small><span>244</span>,<span>164</span>,<span>96</span></small></div>
-<div style="background-color:DarkOrange; color:DarkOrange"><small>DarkOrange</small><small><span>255</span>,<span>140</span>,<span>0</span></small></div>
-<div style="background-color:Orange; color:Orange"><small>Orange</small><small><span>255</span>,<span>165</span>,<span>0</span></small></div>
-<div style="background-color:Gold; color:Gold"><small>Gold</small><small><span>255</span>,<span>215</span>,<span>0</span></small></div>
-<div style="background-color:Yellow; color:Yellow"><small>Yellow</small><small><span>255</span>,<span>255</span>,<span>0</span></small></div>
-<div style="background-color:Goldenrod; color:Goldenrod"><small>Goldenrod</small><small><span>218</span>,<span>165</span>,<span>32</span></small></div>
-<div style="background-color:DarkGoldenrod; color:DarkGoldenrod"><small>DarkGoldenrod</small><small><span>184</span>,<span>134</span>,<span>11</span></small></div>
-<div style="background-color:DarkKhaki; color:DarkKhaki"><small>DarkKhaki</small><small><span>189</span>,<span>183</span>,<span>107</span></small></div>
-<div style="background-color:BurlyWood; color:BurlyWood"><small>BurlyWood</small><small><span>222</span>,<span>184</span>,<span>135</span></small></div>
-<div style="background-color:Tan; color:Tan"><small>Tan</small><small><span>210</span>,<span>180</span>,<span>140</span></small></div>
-<div style="background-color:RosyBrown; color:RosyBrown"><small>RosyBrown</small><small><span>188</span>,<span>143</span>,<span>143</span></small></div>
-</section>
-<section class="colorSection colorName">
-<div style="background-color:Blue; color:Blue"><small>Blue</small><small><span>0</span>,<span>0</span>,<span>255</span></small></div>
-<div style="background-color:MediumBlue; color:MediumBlue"><small>MediumBlue</small><small><span>0</span>,<span>0</span>,<span>205</span></small></div>
-<div style="background-color:DarkBlue; color:DarkBlue"><small>DarkBlue</small><small><span>0</span>,<span>0</span>,<span>139</span></small></div>
-<div style="background-color:Navy; color:Navy"><small>Navy</small><small><span>0</span>,<span>0</span>,<span>128</span></small></div>
-<div style="background-color:MidnightBlue; color:MidnightBlue"><small>MidnightBlue</small><small><span>25</span>,<span>25</span>,<span>112</span></small></div>
-<div style="background-color:DarkSlateBlue; color:DarkSlateBlue"><small>DarkSlateBlue</small><small><span>72</span>,<span>61</span>,<span>139</span></small></div>
-<div style="background-color:SlateBlue; color:SlateBlue"><small>SlateBlue</small><small><span>106</span>,<span>90</span>,<span>205</span></small></div>
-<div style="background-color:MediumSlateBlue; color:MediumSlateBlue"><small>MediumSlateBlue</small><small><span>123</span>,<span>104</span>,<span>238</span></small></div>
-<div style="background-color:MediumPurple; color:MediumPurple"><small>MediumPurple</small><small><span>147</span>,<span>112</span>,<span>219</span></small></div>
-<div style="background-color:RebeccaPurple; color:RebeccaPurple"><small>RebeccaPurple</small><small><span>102</span>,<span>51</span>,<span>153</span></small></div>
-<div style="background-color:Indigo; color:Indigo"><small>Indigo</small><small><span>75</span>,<span>0</span>,<span>130</span></small></div>
-<div style="background-color:BlueViolet; color:BlueViolet"><small>BlueViolet</small><small><span>138</span>,<span>43</span>,<span>226</span></small></div>
-<div style="background-color:DarkOrchid; color:DarkOrchid"><small>DarkOrchid</small><small><span>153</span>,<span>50</span>,<span>204</span></small></div>
-<div style="background-color:MediumOrchid; color:MediumOrchid"><small>MediumOrchid</small><small><span>186</span>,<span>85</span>,<span>211</span></small></div>
-<div style="background-color:Orchid; color:Orchid"><small>Orchid</small><small><span>218</span>,<span>112</span>,<span>214</span></small></div>
-<div style="background-color:Violet; color:Violet"><small>Violet</small><small><span>238</span>,<span>130</span>,<span>238</span></small></div>
-<div style="background-color:Plum; color:Plum"><small>Plum</small><small><span>221</span>,<span>160</span>,<span>221</span></small></div>
-<div style="background-color:Thistle; color:Thistle"><small>Thistle</small><small><span>216</span>,<span>191</span>,<span>216</span></small></div>
-</section>
-<section class="colorSection colorName">
-<div style="background-color:Aqua; color:Aqua"><small>Aqua</small><small><span>0</span>,<span>255</span>,<span>255</span></small></div>
-<div style="background-color:Cyan; color:Cyan"><small>Cyan</small><small><span>0</span>,<span>255</span>,<span>255</span></small></div>
-<div style="background-color:DarkTurquoise; color:DarkTurquoise"><small>DarkTurquoise</small><small><span>0</span>,<span>206</span>,<span>209</span></small></div>
-<div style="background-color:DeepSkyBlue; color:DeepSkyBlue"><small>DeepSkyBlue</small><small><span>0</span>,<span>191</span>,<span>255</span></small></div>
-<div style="background-color:LightSeaGreen; color:LightSeaGreen"><small>LightSeaGreen</small><small><span>32</span>,<span>178</span>,<span>170</span></small></div>
-<div style="background-color:Turquoise; color:Turquoise"><small>Turquoise</small><small><span>64</span>,<span>224</span>,<span>208</span></small></div>
-<div style="background-color:MediumTurquoise; color:MediumTurquoise"><small>MediumTurquoise</small><small><span>72</span>,<span>209</span>,<span>204</span></small></div>
-<div style="background-color:MediumAquamarine; color:MediumAquamarine"><small>MediumAquamarine</small><small><span>102</span>,<span>205</span>,<span>170</span></small></div>
-<div style="background-color:CadetBlue; color:CadetBlue"><small>CadetBlue</small><small><span>95</span>,<span>158</span>,<span>160</span></small></div>
-<div style="background-color:DarkSeaGreen; color:DarkSeaGreen"><small>DarkSeaGreen</small><small><span>143</span>,<span>188</span>,<span>139</span></small></div>
-<div style="background-color:LightSteelBlue; color:LightSteelBlue"><small>LightSteelBlue</small><small><span>176</span>,<span>196</span>,<span>222</span></small></div>
-<div style="background-color:SkyBlue; color:SkyBlue"><small>SkyBlue</small><small><span>135</span>,<span>206</span>,<span>235</span></small></div>
-<div style="background-color:LightBlue; color:LightBlue"><small>LightBlue</small><small><span>173</span>,<span>216</span>,<span>230</span></small></div>
-<div style="background-color:LightSkyBlue; color:LightSkyBlue"><small>LightSkyBlue</small><small><span>135</span>,<span>206</span>,<span>250</span></small></div>
-<div style="background-color:CornflowerBlue; color:CornflowerBlue"><small>CornflowerBlue</small><small><span>100</span>,<span>149</span>,<span>237</span></small></div>
-<div style="background-color:SteelBlue; color:SteelBlue"><small>SteelBlue</small><small><span>70</span>,<span>130</span>,<span>180</span></small></div>
-<div style="background-color:RoyalBlue; color:RoyalBlue"><small>RoyalBlue</small><small><span>65</span>,<span>105</span>,<span>225</span></small></div>
-<div style="background-color:DodgerBlue; color:DodgerBlue"><small>DodgerBlue</small><small><span>30</span>,<span>144</span>,<span>255</span></small></div>
-</section>
-<section class="colorSection colorName">
-<div style="background-color:Chartreuse; color:Chartreuse"><small>Chartreuse</small><small><span>127</span>,<span>255</span>,<span>0</span></small></div>
-<div style="background-color:LawnGreen; color:LawnGreen"><small>LawnGreen</small><small><span>124</span>,<span>252</span>,<span>0</span></small></div>
-<div style="background-color:YellowGreen; color:YellowGreen"><small>YellowGreen</small><small><span>154</span>,<span>205</span>,<span>50</span></small></div>
-<div style="background-color:OliveDrab; color:OliveDrab"><small>OliveDrab</small><small><span>107</span>,<span>142</span>,<span>35</span></small></div>
-<div style="background-color:DarkOliveGreen; color:DarkOliveGreen"><small>DarkOliveGreen</small><small><span>85</span>,<span>107</span>,<span>47</span></small></div>
-<div style="background-color:DarkGreen; color:DarkGreen"><small>DarkGreen</small><small><span>0</span>,<span>100</span>,<span>0</span></small></div>
-<div style="background-color:Green; color:Green"><small>Green</small><small><span>0</span>,<span>128</span>,<span>0</span></small></div>
-<div style="background-color:ForestGreen; color:ForestGreen"><small>ForestGreen</small><small><span>34</span>,<span>139</span>,<span>34</span></small></div>
-<div style="background-color:SeaGreen; color:SeaGreen"><small>SeaGreen</small><small><span>46</span>,<span>139</span>,<span>87</span></small></div>
-<div style="background-color:MediumSeaGreen; color:MediumSeaGreen"><small>MediumSeaGreen</small><small><span>60</span>,<span>179</span>,<span>113</span></small></div>
-<div style="background-color:LightGreen; color:LightGreen"><small>LightGreen</small><small><span>144</span>,<span>238</span>,<span>144</span></small></div>
-<div style="background-color:SpringGreen; color:SpringGreen"><small>SpringGreen</small><small><span>0</span>,<span>255</span>,<span>127</span></small></div>
-<div style="background-color:MediumSpringGreen; color:MediumSpringGreen"><small>MediumSpringGreen</small><small><span>0</span>,<span>250</span>,<span>154</span></small></div>
-<div style="background-color:Teal; color:Teal"><small>Teal</small><small><span>0</span>,<span>128</span>,<span>128</span></small></div>
-<div style="background-color:DarkCyan; color:DarkCyan"><small>DarkCyan</small><small><span>0</span>,<span>139</span>,<span>139</span></small></div>
-<div style="background-color:LimeGreen; color:LimeGreen"><small>LimeGreen</small><small><span>50</span>,<span>205</span>,<span>50</span></small></div>
-<div style="background-color:Lime; color:Lime"><small>Lime</small><small><span>0</span>,<span>255</span>,<span>0</span></small></div>
-</section>
-<section class="colorSection colorName">
-<div style="background-color:DarkSlateGray; color:DarkSlateGray"><small>DarkSlateGray</small><small><span>47</span>,<span>79</span>,<span>79</span></small></div>
-<div style="background-color:PaleTurquoise; color:PaleTurquoise"><small>PaleTurquoise</small><small><span>175</span>,<span>238</span>,<span>238</span></small></div>
-<div style="background-color:PowderBlue; color:PowderBlue"><small>PowderBlue</small><small><span>176</span>,<span>224</span>,<span>230</span></small></div>
-<div style="background-color:LightCyan; color:LightCyan"><small>LightCyan</small><small><span>224</span>,<span>255</span>,<span>255</span></small></div>
-<div style="background-color:GreenYellow; color:GreenYellow"><small>GreenYellow</small><small><span>173</span>,<span>255</span>,<span>47</span></small></div>
-<div style="background-color:PaleGreen; color:PaleGreen"><small>PaleGreen</small><small><span>152</span>,<span>251</span>,<span>152</span></small></div>
-<div style="background-color:Aquamarine; color:Aquamarine"><small>Aquamarine</small><small><span>127</span>,<span>255</span>,<span>212</span></small></div>
-</section>
-<script>
-</script>
-</body>
+<html lang="zh-Hant-TW">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1, viewport-fit=cover">
+		<meta name="description" content="HTML Color">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="SHUN" content="Script">
+		<title>HTML Color</title>
+		<style type="text/css">
+			@import url("https://fonts.googleapis.com/css2?family=Asap&family=Roboto:ital,wght@0,500;0,900;1,500&display=swap");
+			body { display:flex; flex-flow:column nowrap; gap:5px; align-items:center; justify-content:center; margin:0; padding:0; width:100vw; height:100vh; font-size:15px; font-family:"Roboto","Asap",sans-serif; overflow-x:hidden; overflow-y:auto; user-select:none; }
+			.flex-RowNowrap  { display:flex; flex-flow:row nowrap;  gap:0; align-items:center; justify-content:center; margin:0; padding:0; width:100%; }
+			.flex-ColumnWrap { display:flex; flex-flow:column wrap; gap:0; align-items:center; justify-content:center; margin:0; padding:0; }
+			.color-Wrapper { padding:2em; border-radius:10px; background:linear-gradient(rgba(255,255,255,0.5),rgba(0,0,0,0.5)); backdrop-filter:blur(50px); box-shadow:0 20px 40px 1px rgba(0,0,0,0.5); }
+			.color-Code { padding-bottom:1em; align-items:flex-start; gap:1em; }
+			.color-Code span { position:relative; }
+			.color-Code span.Copied:after { content:"已複製"; opacity:0; position:absolute; top:1em; right:-4em; white-space:nowrap; text-shadow:0 0 3px blue; animation: fadein-fadeout 1s ease-in-out; }
+			@keyframes fadein-fadeout { from { opacity:0; top:1em; } 20% { opacity:1; top:0.5em; } 80% { opacity:1; top:0.5em; } to { opacity:0; top:0; } }
+			.color-Code label { color:#444; }
+			.color-Code strong { display:inline-flex; margin-left:1em; padding:0.5em 1em; width:44em; white-space:nowrap; overflow: hidden; text-overflow:ellipsis; border-radius:5px; cursor:pointer; }
+			.color-Div { gap:5px; }
+			.color-Section { height:24em; }
+			.color-Section>span  { flex:0 0 2em; width:2em; height:2em; text-align:center; }
+			.color-Gradient { justify-content:flex-start; }
+			.color-Gradient>span { flex:0 0 4em; width:4em; height:4em; line-height:4em; }
+			.box-Shine { animation:box-Shine 1s infinite alternate; }
+			@keyframes box-Shine { from { box-shadow:inset -1px -1px 1px 1px transparent,-1px -1px 1px 1px transparent } 
+									 to { box-shadow:inset -1px -1px 1px 1px #ccc,-1px -1px 1px 1px #ccc } }
+		</style>
+	</head>
+	<body>
+		<span class="color-Wrapper flex-ColumnWrap">
+			<div class="color-Code flex-ColumnWrap">
+				<span><label>Hex</label><strong id="color-Hex">#000000</strong></span><span><label>RGB</label><strong id="color-RGB">rgba(0,0,0,1)</strong></span>
+			</div>
+			<div class="color-Div flex-RowNowrap">
+				<section class="color-Section flex-ColumnWrap">
+					<span style="background-color:#000000" data-hex="#000000" data-rgba="rgba(0,0,0,1)"></span>
+					<span style="background-color:#272727" data-hex="#272727" data-rgba="待修改"></span>
+					<span style="background-color:#3C3C3C" data-hex="#3C3C3C" data-rgba="待修改"></span>
+					<span style="background-color:#4F4F4F" data-hex="#4F4F4F" data-rgba="待修改"></span>
+					<span style="background-color:#5B5B5B" data-hex="#5B5B5B" data-rgba="待修改"></span>
+					<span style="background-color:#6C6C6C" data-hex="#6C6C6C" data-rgba="待修改"></span>
+					<span style="background-color:#7B7B7B" data-hex="#7B7B7B" data-rgba="待修改"></span>
+					<span style="background-color:#8E8E8E" data-hex="#8E8E8E" data-rgba="待修改"></span>
+					<span style="background-color:#9D9D9D" data-hex="#9D9D9D" data-rgba="待修改"></span>
+					<span style="background-color:#ADADAD" data-hex="#ADADAD" data-rgba="待修改"></span>
+					<span style="background-color:#BEBEBE" data-hex="#BEBEBE" data-rgba="待修改"></span>
+					<span style="background-color:#FFFFFF" data-hex="#FFFFFF" data-rgba="待修改"></span>
+
+					<span style="background-color:#2F0000" data-hex="#2F0000" data-rgba="待修改"></span>
+					<span style="background-color:#4D0000" data-hex="#4D0000" data-rgba="待修改"></span>
+					<span style="background-color:#600000" data-hex="#600000" data-rgba="待修改"></span>
+					<span style="background-color:#750000" data-hex="#750000" data-rgba="待修改"></span>
+					<span style="background-color:#930000" data-hex="#930000" data-rgba="待修改"></span>
+					<span style="background-color:#AE0000" data-hex="#AE0000" data-rgba="待修改"></span>
+					<span style="background-color:#CE0000" data-hex="#CE0000" data-rgba="待修改"></span>
+					<span style="background-color:#EA0000" data-hex="#EA0000" data-rgba="待修改"></span>
+					<span style="background-color:#FF0000" data-hex="#FF0000" data-rgba="待修改"></span>
+					<span style="background-color:#FF2D2D" data-hex="#FF2D2D" data-rgba="待修改"></span>
+					<span style="background-color:#FF5151" data-hex="#FF5151" data-rgba="待修改"></span>
+					<span style="background-color:#FF7575" data-hex="#FF7575" data-rgba="待修改"></span>
+
+					<span style="background-color:#642100" data-hex="#642100" data-rgba="待修改"></span>
+					<span style="background-color:#842B00" data-hex="#842B00" data-rgba="待修改"></span>
+					<span style="background-color:#A23400" data-hex="#A23400" data-rgba="待修改"></span>
+					<span style="background-color:#BB3D00" data-hex="#BB3D00" data-rgba="待修改"></span>
+					<span style="background-color:#D94600" data-hex="#D94600" data-rgba="待修改"></span>
+					<span style="background-color:#F75000" data-hex="#F75000" data-rgba="待修改"></span>
+					<span style="background-color:#FF5809" data-hex="#FF5809" data-rgba="待修改"></span>
+					<span style="background-color:#FF8040" data-hex="#FF8040" data-rgba="待修改"></span>
+					<span style="background-color:#FF8F59" data-hex="#FF8F59" data-rgba="待修改"></span>
+					<span style="background-color:#FF9D6F" data-hex="#FF9D6F" data-rgba="待修改"></span>
+					<span style="background-color:#FFAD86" data-hex="#FFAD86" data-rgba="待修改"></span>
+					<span style="background-color:#FFBD9D" data-hex="#FFBD9D" data-rgba="待修改"></span>
+
+					<span style="background-color:#844200" data-hex="#844200" data-rgba="待修改"></span>
+					<span style="background-color:#9F5000" data-hex="#9F5000" data-rgba="待修改"></span>
+					<span style="background-color:#BB5E00" data-hex="#BB5E00" data-rgba="待修改"></span>
+					<span style="background-color:#D26900" data-hex="#D26900" data-rgba="待修改"></span>
+					<span style="background-color:#EA7500" data-hex="#EA7500" data-rgba="待修改"></span>
+					<span style="background-color:#FF8000" data-hex="#FF8000" data-rgba="待修改"></span>
+					<span style="background-color:#FF9224" data-hex="#FF9224" data-rgba="待修改"></span>
+					<span style="background-color:#FFA042" data-hex="#FFA042" data-rgba="待修改"></span>
+					<span style="background-color:#FFAF60" data-hex="#FFAF60" data-rgba="待修改"></span>
+					<span style="background-color:#FFBB77" data-hex="#FFBB77" data-rgba="待修改"></span>
+					<span style="background-color:#FFC78E" data-hex="#FFC78E" data-rgba="待修改"></span>
+					<span style="background-color:#FFD1A4" data-hex="#FFD1A4" data-rgba="待修改"></span>
+
+					<span style="background-color:#5B4B00" data-hex="#5B4B00" data-rgba="待修改"></span>
+					<span style="background-color:#796400" data-hex="#796400" data-rgba="待修改"></span>
+					<span style="background-color:#977C00" data-hex="#977C00" data-rgba="待修改"></span>
+					<span style="background-color:#AE8F00" data-hex="#AE8F00" data-rgba="待修改"></span>
+					<span style="background-color:#C6A300" data-hex="#C6A300" data-rgba="待修改"></span>
+					<span style="background-color:#D9B300" data-hex="#D9B300" data-rgba="待修改"></span>
+					<span style="background-color:#EAC100" data-hex="#EAC100" data-rgba="待修改"></span>
+					<span style="background-color:#FFD306" data-hex="#FFD306" data-rgba="待修改"></span>
+					<span style="background-color:#FFDC35" data-hex="#FFDC35" data-rgba="待修改"></span>
+					<span style="background-color:#FFE153" data-hex="#FFE153" data-rgba="待修改"></span>
+					<span style="background-color:#FFE66F" data-hex="#FFE66F" data-rgba="待修改"></span>
+					<span style="background-color:#FFED97" data-hex="#FFED97" data-rgba="待修改"></span>
+
+					<span style="background-color:#424200" data-hex="#424200" data-rgba="待修改"></span>
+					<span style="background-color:#5B5B00" data-hex="#5B5B00" data-rgba="待修改"></span>
+					<span style="background-color:#737300" data-hex="#737300" data-rgba="待修改"></span>
+					<span style="background-color:#8C8C00" data-hex="#8C8C00" data-rgba="待修改"></span>
+					<span style="background-color:#A6A600" data-hex="#A6A600" data-rgba="待修改"></span>
+					<span style="background-color:#C4C400" data-hex="#C4C400" data-rgba="待修改"></span>
+					<span style="background-color:#E1E100" data-hex="#E1E100" data-rgba="待修改"></span>
+					<span style="background-color:#F9F900" data-hex="#F9F900" data-rgba="待修改"></span>
+					<span style="background-color:#FFFF37" data-hex="#FFFF37" data-rgba="待修改"></span>
+					<span style="background-color:#FFFF6F" data-hex="#FFFF6F" data-rgba="待修改"></span>
+					<span style="background-color:#FFFF93" data-hex="#FFFF93" data-rgba="待修改"></span>
+					<span style="background-color:#FFFFAA" data-hex="#FFFFAA" data-rgba="待修改"></span>
+
+					<span style="background-color:#467500" data-hex="#467500" data-rgba="待修改"></span>
+					<span style="background-color:#548C00" data-hex="#548C00" data-rgba="待修改"></span>
+					<span style="background-color:#64A600" data-hex="#64A600" data-rgba="待修改"></span>
+					<span style="background-color:#73BF00" data-hex="#73BF00" data-rgba="待修改"></span>
+					<span style="background-color:#82D900" data-hex="#82D900" data-rgba="待修改"></span>
+					<span style="background-color:#8CEA00" data-hex="#8CEA00" data-rgba="待修改"></span>
+					<span style="background-color:#9AFF02" data-hex="#9AFF02" data-rgba="待修改"></span>
+					<span style="background-color:#A8FF24" data-hex="#A8FF24" data-rgba="待修改"></span>
+					<span style="background-color:#B7FF4A" data-hex="#B7FF4A" data-rgba="待修改"></span>
+					<span style="background-color:#C2FF68" data-hex="#C2FF68" data-rgba="待修改"></span>
+					<span style="background-color:#CCFF80" data-hex="#CCFF80" data-rgba="待修改"></span>
+					<span style="background-color:#D3FF93" data-hex="#D3FF93" data-rgba="待修改"></span>
+
+					<span style="background-color:#006000" data-hex="#006000" data-rgba="待修改"></span>
+					<span style="background-color:#007500" data-hex="#007500" data-rgba="待修改"></span>
+					<span style="background-color:#009100" data-hex="#009100" data-rgba="待修改"></span>
+					<span style="background-color:#00A600" data-hex="#00A600" data-rgba="待修改"></span>
+					<span style="background-color:#00BB00" data-hex="#00BB00" data-rgba="待修改"></span>
+					<span style="background-color:#00DB00" data-hex="#00DB00" data-rgba="待修改"></span>
+					<span style="background-color:#00EC00" data-hex="#00EC00" data-rgba="待修改"></span>
+					<span style="background-color:#28FF28" data-hex="#28FF28" data-rgba="待修改"></span>
+					<span style="background-color:#53FF53" data-hex="#53FF53" data-rgba="待修改"></span>
+					<span style="background-color:#79FF79" data-hex="#79FF79" data-rgba="待修改"></span>
+					<span style="background-color:#93FF93" data-hex="#93FF93" data-rgba="待修改"></span>
+					<span style="background-color:#A6FFA6" data-hex="#A6FFA6" data-rgba="待修改"></span>
+
+					<span style="background-color:#006030" data-hex="#006030" data-rgba="待修改"></span>
+					<span style="background-color:#01814A" data-hex="#01814A" data-rgba="待修改"></span>
+					<span style="background-color:#019858" data-hex="#019858" data-rgba="待修改"></span>
+					<span style="background-color:#01B468" data-hex="#01B468" data-rgba="待修改"></span>
+					<span style="background-color:#02C874" data-hex="#02C874" data-rgba="待修改"></span>
+					<span style="background-color:#02DF82" data-hex="#02DF82" data-rgba="待修改"></span>
+					<span style="background-color:#02F78E" data-hex="#02F78E" data-rgba="待修改"></span>
+					<span style="background-color:#1AFD9C" data-hex="#1AFD9C" data-rgba="待修改"></span>
+					<span style="background-color:#4EFEB3" data-hex="#4EFEB3" data-rgba="待修改"></span>
+					<span style="background-color:#7AFEC6" data-hex="#7AFEC6" data-rgba="待修改"></span>
+					<span style="background-color:#96FED1" data-hex="#96FED1" data-rgba="待修改"></span>
+					<span style="background-color:#ADFEDC" data-hex="#ADFEDC" data-rgba="待修改"></span>
+
+					<span style="background-color:#003E3E" data-hex="#003E3E" data-rgba="待修改"></span>
+					<span style="background-color:#005757" data-hex="#005757" data-rgba="待修改"></span>
+					<span style="background-color:#007979" data-hex="#007979" data-rgba="待修改"></span>
+					<span style="background-color:#009393" data-hex="#009393" data-rgba="待修改"></span>
+					<span style="background-color:#00AEAE" data-hex="#00AEAE" data-rgba="待修改"></span>
+					<span style="background-color:#00CACA" data-hex="#00CACA" data-rgba="待修改"></span>
+					<span style="background-color:#00E3E3" data-hex="#00E3E3" data-rgba="待修改"></span>
+					<span style="background-color:#00FFFF" data-hex="#00FFFF" data-rgba="待修改"></span>
+					<span style="background-color:#4DFFFF" data-hex="#4DFFFF" data-rgba="待修改"></span>
+					<span style="background-color:#80FFFF" data-hex="#80FFFF" data-rgba="待修改"></span>
+					<span style="background-color:#A6FFFF" data-hex="#A6FFFF" data-rgba="待修改"></span>
+					<span style="background-color:#BBFFFF" data-hex="#BBFFFF" data-rgba="待修改"></span>
+
+					<span style="background-color:#003060" data-hex="#003060" data-rgba="待修改"></span>
+					<span style="background-color:#003D79" data-hex="#003D79" data-rgba="待修改"></span>
+					<span style="background-color:#004B97" data-hex="#004B97" data-rgba="待修改"></span>
+					<span style="background-color:#005AB5" data-hex="#005AB5" data-rgba="待修改"></span>
+					<span style="background-color:#0066CC" data-hex="#0066CC" data-rgba="待修改"></span>
+					<span style="background-color:#0072E3" data-hex="#0072E3" data-rgba="待修改"></span>
+					<span style="background-color:#0080FF" data-hex="#0080FF" data-rgba="待修改"></span>
+					<span style="background-color:#2894FF" data-hex="#2894FF" data-rgba="待修改"></span>
+					<span style="background-color:#46A3FF" data-hex="#46A3FF" data-rgba="待修改"></span>
+					<span style="background-color:#66B3FF" data-hex="#66B3FF" data-rgba="待修改"></span>
+					<span style="background-color:#84C1FF" data-hex="#84C1FF" data-rgba="待修改"></span>
+					<span style="background-color:#97CBFF" data-hex="#97CBFF" data-rgba="待修改"></span>
+
+					<span style="background-color:#000079" data-hex="#000079" data-rgba="待修改"></span>
+					<span style="background-color:#000093" data-hex="#000093" data-rgba="待修改"></span>
+					<span style="background-color:#0000C6" data-hex="#0000C6" data-rgba="待修改"></span>
+					<span style="background-color:#0000C6" data-hex="#0000C6" data-rgba="待修改"></span>
+					<span style="background-color:#0000E3" data-hex="#0000E3" data-rgba="待修改"></span>
+					<span style="background-color:#2828FF" data-hex="#2828FF" data-rgba="待修改"></span>
+					<span style="background-color:#4A4AFF" data-hex="#4A4AFF" data-rgba="待修改"></span>
+					<span style="background-color:#6A6AFF" data-hex="#6A6AFF" data-rgba="待修改"></span>
+					<span style="background-color:#7D7DFF" data-hex="#7D7DFF" data-rgba="待修改"></span>
+					<span style="background-color:#9393FF" data-hex="#9393FF" data-rgba="待修改"></span>
+					<span style="background-color:#AAAAFF" data-hex="#AAAAFF" data-rgba="待修改"></span>
+					<span style="background-color:#B9B9FF" data-hex="#B9B9FF" data-rgba="待修改"></span>
+
+					<span style="background-color:#28004D" data-hex="#28004D" data-rgba="待修改"></span>
+					<span style="background-color:#3A006F" data-hex="#3A006F" data-rgba="待修改"></span>
+					<span style="background-color:#4B0091" data-hex="#4B0091" data-rgba="待修改"></span>
+					<span style="background-color:#5B00AE" data-hex="#5B00AE" data-rgba="待修改"></span>
+					<span style="background-color:#6F00D2" data-hex="#6F00D2" data-rgba="待修改"></span>
+					<span style="background-color:#8600FF" data-hex="#8600FF" data-rgba="待修改"></span>
+					<span style="background-color:#921AFF" data-hex="#921AFF" data-rgba="待修改"></span>
+					<span style="background-color:#9F35FF" data-hex="#9F35FF" data-rgba="待修改"></span>
+					<span style="background-color:#B15BFF" data-hex="#B15BFF" data-rgba="待修改"></span>
+					<span style="background-color:#BE77FF" data-hex="#BE77FF" data-rgba="待修改"></span>
+					<span style="background-color:#CA8EFF" data-hex="#CA8EFF" data-rgba="待修改"></span>
+					<span style="background-color:#D3A4FF" data-hex="#D3A4FF" data-rgba="待修改"></span>
+
+					<span style="background-color:#460046" data-hex="#460046" data-rgba="待修改"></span>
+					<span style="background-color:#5E005E" data-hex="#5E005E" data-rgba="待修改"></span>
+					<span style="background-color:#750075" data-hex="#750075" data-rgba="待修改"></span>
+					<span style="background-color:#930093" data-hex="#930093" data-rgba="待修改"></span>
+					<span style="background-color:#AE00AE" data-hex="#AE00AE" data-rgba="待修改"></span>
+					<span style="background-color:#D200D2" data-hex="#D200D2" data-rgba="待修改"></span>
+					<span style="background-color:#E800E8" data-hex="#E800E8" data-rgba="待修改"></span>
+					<span style="background-color:#FF00FF" data-hex="#FF00FF" data-rgba="待修改"></span>
+					<span style="background-color:#FF44FF" data-hex="#FF44FF" data-rgba="待修改"></span>
+					<span style="background-color:#FF77FF" data-hex="#FF77FF" data-rgba="待修改"></span>
+					<span style="background-color:#FF8EFF" data-hex="#FF8EFF" data-rgba="待修改"></span>
+					<span style="background-color:#FFA6FF" data-hex="#FFA6FF" data-rgba="待修改"></span>
+
+					<span style="background-color:#600030" data-hex="#600030" data-rgba="待修改"></span>
+					<span style="background-color:#820041" data-hex="#820041" data-rgba="待修改"></span>
+					<span style="background-color:#9F0050" data-hex="#9F0050" data-rgba="待修改"></span>
+					<span style="background-color:#BF0060" data-hex="#BF0060" data-rgba="待修改"></span>
+					<span style="background-color:#D9006C" data-hex="#D9006C" data-rgba="待修改"></span>
+					<span style="background-color:#F00078" data-hex="#F00078" data-rgba="待修改"></span>
+					<span style="background-color:#FF0080" data-hex="#FF0080" data-rgba="待修改"></span>
+					<span style="background-color:#FF359A" data-hex="#FF359A" data-rgba="待修改"></span>
+					<span style="background-color:#FF60AF" data-hex="#FF60AF" data-rgba="待修改"></span>
+					<span style="background-color:#FF79BC" data-hex="#FF79BC" data-rgba="待修改"></span>
+					<span style="background-color:#FF95CA" data-hex="#FF95CA" data-rgba="待修改"></span>
+					<span style="background-color:#FFAAD5" data-hex="#FFAAD5" data-rgba="待修改"></span>
+				</section>
+				<section class="color-Section flex-ColumnWrap">
+					<span style="background-color:#613030" data-hex="#613030" data-rgba="待修改"></span>
+					<span style="background-color:#743A3A" data-hex="#743A3A" data-rgba="待修改"></span>
+					<span style="background-color:#804040" data-hex="#804040" data-rgba="待修改"></span>
+					<span style="background-color:#984B4B" data-hex="#984B4B" data-rgba="待修改"></span>
+					<span style="background-color:#AD5A5A" data-hex="#AD5A5A" data-rgba="待修改"></span>
+					<span style="background-color:#B87070" data-hex="#B87070" data-rgba="待修改"></span>
+					<span style="background-color:#C48888" data-hex="#C48888" data-rgba="待修改"></span>
+					<span style="background-color:#CF9E9E" data-hex="#CF9E9E" data-rgba="待修改"></span>
+					<span style="background-color:#D9B3B3" data-hex="#D9B3B3" data-rgba="待修改"></span>
+					<span style="background-color:#E1C4C4" data-hex="#E1C4C4" data-rgba="待修改"></span>
+					<span style="background-color:#EBD6D6" data-hex="#EBD6D6" data-rgba="待修改"></span>
+					<span style="background-color:#F2E6E6" data-hex="#F2E6E6" data-rgba="待修改"></span>
+
+					<span style="background-color:#616130" data-hex="#616130" data-rgba="待修改"></span>
+					<span style="background-color:#707038" data-hex="#707038" data-rgba="待修改"></span>
+					<span style="background-color:#808040" data-hex="#808040" data-rgba="待修改"></span>
+					<span style="background-color:#949449" data-hex="#949449" data-rgba="待修改"></span>
+					<span style="background-color:#A5A552" data-hex="#A5A552" data-rgba="待修改"></span>
+					<span style="background-color:#AFAF61" data-hex="#AFAF61" data-rgba="待修改"></span>
+					<span style="background-color:#B9B973" data-hex="#B9B973" data-rgba="待修改"></span>
+					<span style="background-color:#C2C287" data-hex="#C2C287" data-rgba="待修改"></span>
+					<span style="background-color:#CDCD9A" data-hex="#CDCD9A" data-rgba="待修改"></span>
+					<span style="background-color:#D6D6AD" data-hex="#D6D6AD" data-rgba="待修改"></span>
+					<span style="background-color:#DEDEBE" data-hex="#DEDEBE" data-rgba="待修改"></span>
+					<span style="background-color:#E8E8D0" data-hex="#E8E8D0" data-rgba="待修改"></span>
+
+					<span style="background-color:#336666" data-hex="#336666" data-rgba="待修改"></span>
+					<span style="background-color:#3D7878" data-hex="#3D7878" data-rgba="待修改"></span>
+					<span style="background-color:#408080" data-hex="#408080" data-rgba="待修改"></span>
+					<span style="background-color:#4F9D9D" data-hex="#4F9D9D" data-rgba="待修改"></span>
+					<span style="background-color:#5CADAD" data-hex="#5CADAD" data-rgba="待修改"></span>
+					<span style="background-color:#6FB7B7" data-hex="#6FB7B7" data-rgba="待修改"></span>
+					<span style="background-color:#81C0C0" data-hex="#81C0C0" data-rgba="待修改"></span>
+					<span style="background-color:#95CACA" data-hex="#95CACA" data-rgba="待修改"></span>
+					<span style="background-color:#A3D1D1" data-hex="#A3D1D1" data-rgba="待修改"></span>
+					<span style="background-color:#B3D9D9" data-hex="#B3D9D9" data-rgba="待修改"></span>
+					<span style="background-color:#C4E1E1" data-hex="#C4E1E1" data-rgba="待修改"></span>
+					<span style="background-color:#D1E9E9" data-hex="#D1E9E9" data-rgba="待修改"></span>
+
+					<span style="background-color:#484891" data-hex="#484891" data-rgba="待修改"></span>
+					<span style="background-color:#5151A2" data-hex="#5151A2" data-rgba="待修改"></span>
+					<span style="background-color:#5A5AAD" data-hex="#5A5AAD" data-rgba="待修改"></span>
+					<span style="background-color:#7373B9" data-hex="#7373B9" data-rgba="待修改"></span>
+					<span style="background-color:#8080C0" data-hex="#8080C0" data-rgba="待修改"></span>
+					<span style="background-color:#9999CC" data-hex="#9999CC" data-rgba="待修改"></span>
+					<span style="background-color:#A6A6D2" data-hex="#A6A6D2" data-rgba="待修改"></span>
+					<span style="background-color:#B8B8DC" data-hex="#B8B8DC" data-rgba="待修改"></span>
+					<span style="background-color:#C7C7E2" data-hex="#C7C7E2" data-rgba="待修改"></span>
+					<span style="background-color:#D8D8EB" data-hex="#D8D8EB" data-rgba="待修改"></span>
+					<span style="background-color:#E6E6F2" data-hex="#E6E6F2" data-rgba="待修改"></span>
+					<span style="background-color:#F3F3FA" data-hex="#F3F3FA" data-rgba="待修改"></span>
+
+					<span style="background-color:#6C3365" data-hex="#6C3365" data-rgba="待修改"></span>
+					<span style="background-color:#7E3D76" data-hex="#7E3D76" data-rgba="待修改"></span>
+					<span style="background-color:#8F4586" data-hex="#8F4586" data-rgba="待修改"></span>
+					<span style="background-color:#9F4D95" data-hex="#9F4D95" data-rgba="待修改"></span>
+					<span style="background-color:#AE57A4" data-hex="#AE57A4" data-rgba="待修改"></span>
+					<span style="background-color:#B766AD" data-hex="#B766AD" data-rgba="待修改"></span>
+					<span style="background-color:#C07AB8" data-hex="#C07AB8" data-rgba="待修改"></span>
+					<span style="background-color:#CA8EC2" data-hex="#CA8EC2" data-rgba="待修改"></span>
+					<span style="background-color:#D2A2CC" data-hex="#D2A2CC" data-rgba="待修改"></span>
+					<span style="background-color:#DAB1D5" data-hex="#DAB1D5" data-rgba="待修改"></span>
+					<span style="background-color:#E2C2DE" data-hex="#E2C2DE" data-rgba="待修改"></span>
+					<span style="background-color:#EBD3E8" data-hex="#EBD3E8" data-rgba="待修改"></span>
+				</section>
+				<section class="color-Section flex-ColumnWrap color-Gradient">
+					<span style="background-image:linear-gradient(rgba(255,255,255,0.1),rgba(0,0,0,0.5)); backdrop-filter:blur(15px); box-shadow:0 20px 40px 1px rgba(0,0,0,0.12);" data-hex="linear-gradient(rgba(255,255,255,0.1),rgba(0,0,0,0.5)); backdrop-filter:blur(15px); box-shadow:0 20px 40px 1px rgba(0,0,0,0.12)" data-rgba="待修改">毛玻璃</span>
+					<span style="background-image:linear-gradient(45deg,#434343 0%,black 100%);" data-hex="linear-gradient(45deg,#434343 0%,black 100%)" data-rgba="待修改"></span>
+					<span style="background-image:linear-gradient(45deg,#323232 0%,#3F3F3F 40%,#1C1C1C 150%),linear-gradient(45deg,rgba(255,255,255,0.40) 0%,rgba(0,0,0,0.25) 200%)" data-hex="linear-gradient(45deg,#323232 0%,#3F3F3F 40%,#1C1C1C 150%),linear-gradient(to top,rgba(255,255,255,0.40) 0%,rgba(0,0,0,0.25) 200%); background-blend-mode:darken" data-rgba="待修改"></span>
+					<span style="background-image:linear-gradient(45deg,rgba(255,244,228,1) 7.1%,rgba(240,246,238,1) 67.4%);" data-hex="linear-gradient(45deg,rgba(255,244,228,1) 7.1%,rgba(240,246,238,1) 67.4%)" data-rgba="待修改"></span>
+					<span style="background-image:linear-gradient(45deg,#dad4ec 0%,#dad4ec 1%,#f3e7e9 100%);" data-hex="linear-gradient(45deg,#dad4ec 0%,#dad4ec 1%,#f3e7e9 100%)" data-rgba="待修改"></span>
+					<span style="background-image:linear-gradient(45deg,#93a5cf 0%,#e4efe9 100%);" data-hex="linear-gradient(45deg,#93a5cf 0%,#e4efe9 100%)" data-rgba="待修改"></span>
+					<span style="background-image:linear-gradient(45deg,#eea2a2 0%,#bbc1bf 19%,#57c6e1 42%,#b49fda 79%,#7ac5d8 100%);" data-hex="linear-gradient(45deg,#eea2a2 0%,#bbc1bf 19%,#57c6e1 42%,#b49fda 79%,#7ac5d8 100%)" data-rgba="待修改"></span>
+					<span style="background-image:linear-gradient(45deg,#FFBAC3 0%,#C5C1FF 56%,#2CD8D5 100%);" data-hex="linear-gradient(45deg,#2CD8D5 0%,#C5C1FF 56%,#FFBAC3 100%)" data-rgba="待修改"></span>
+					<span style="background-image:linear-gradient(45deg,#f79533,#f37055,#ef4e7b,#a166ab,#5073b8,#1098ad,#07b39b,#6fba82)" data-hex="linear-gradient(45deg,#f79533,#f37055,#ef4e7b,#a166ab,#5073b8,#1098ad,#07b39b,#6fba82)" data-rgba="待修改"></span>
+					<span style="background-image:linear-gradient(45deg,#FF057C 0%,#8D0B93 50%,#321575 100%);" data-hex="linear-gradient(45deg,#FF057C 0%,#8D0B93 50%,#321575 100%)" data-rgba="待修改"></span>
+					<span style="background-image:linear-gradient(45deg,rgba(217,9,27,1) 6.9%,rgba(22,68,150,1) 75%);" data-hex="linear-gradient(45deg,rgba(217,9,27,1) 6.9%,rgba(22,68,150,1) 75%)" data-rgba="待修改"></span>
+					<span style="background-image:linear-gradient(45deg,#FFF800 0%,#FF1361 29%,#44107A 67%,#231557 100%);" data-hex="linear-gradient(45deg,#231557 0%,#44107A 29%,#FF1361 67%,#FFF800 100%)" data-rgba="待修改"></span>
+					<span style="background-image:linear-gradient(45deg,#FDBB2D 0%,#3A1C71 100%);" data-hex="linear-gradient(45deg,#FDBB2D 0%,#3A1C71 100%)" data-rgba="待修改"></span>
+					<span style="background-image:linear-gradient(45deg,#4CAF50,#ff9800)" data-hex="linear-gradient(45deg,#4CAF50,#ff9800)" data-rgba="待修改"></span>
+					<span style="background-image:linear-gradient(45deg,limegreen,transparent),linear-gradient(165deg,skyblue,transparent),linear-gradient(285deg,coral,transparent)" data-hex="linear-gradient(45deg,limegreen,transparent),linear-gradient(165deg,skyblue,transparent),linear-gradient(-285deg,coral,transparent)" data-rgba="待修改"></span>
+					<span style="background-image:linear-gradient(45deg,rgba(181,149,208,1) 3.2%,rgba(251,148,207,1) 9.9%,rgba(181,149,208,1) 22.9%,rgba(251,148,207,1) 36.4%,rgba(181,149,208,1) 50.1%,rgba(251,148,207,1) 61.1%,rgba(181,149,208,1) 71.2%,rgba(251,148,207,1) 84.2%,rgba(181,149,208,1) 92.2%);" data-hex="linear-gradient(45deg,rgba(181,149,208,1) 3.2%,rgba(251,148,207,1) 9.9%,rgba(181,149,208,1) 22.9%,rgba(251,148,207,1) 36.4%,rgba(181,149,208,1) 50.1%,rgba(251,148,207,1) 61.1%,rgba(181,149,208,1) 71.2%,rgba(251,148,207,1) 84.2%,rgba(181,149,208,1) 92.2%)" data-rgba="待修改"></span>
+				</section>
+			</div>
+		</span>
+	</body>
+	<script type="text/javascript">
+		var colorSection = document.querySelectorAll('.color-Section'),
+			colorHex = document.querySelector('#color-Hex'),
+			colorRGB = document.querySelector('#color-RGB');
+
+		function readCode(e) {
+			if ( e.target.tagName === 'SPAN' ) {
+			colorHex.innerText = e.target.getAttribute('data-hex');
+			colorRGB.innerText = e.target.getAttribute('data-rgba');
+			Array.from(colorSection).forEach(section => { var colorSpan = section.querySelectorAll('span'); Array.from(colorSpan).forEach(span => { span.classList.remove('box-Shine') }) });
+			e.target.classList.add('box-Shine');
+			document.body.setAttribute('style',`background:${e.target.getAttribute('data-hex')}`);
+			}
+		}
+		Array.from(colorSection).forEach(section => { section.addEventListener('click',readCode) });
+
+		function copyCode(e) {
+			navigator.clipboard.writeText(e.target.innerText);
+			e.target.parentElement.classList.add('Copied');
+			setTimeout( function(){ e.target.parentElement.classList.remove('Copied') }, 2000 );
+		}
+		colorHex.addEventListener('click',copyCode);
+		colorRGB.addEventListener('click',copyCode);
+
+//		console.log(e.target.innerText);
+	</script>
 </html>
