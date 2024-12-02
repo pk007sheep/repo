@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1, viewport-fit=cover">
+		<meta name="description" content="CSS Selectors 選擇器表">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="SHUN" content="Script">
+		<title>CSS Selectors 選擇器表</title>
+		<style type="text/css">
+			@import url("https://fonts.googleapis.com/css2?family=Asap&family=Roboto:ital,wght@0,500;0,900;1,500&display=swap");
+			.flex-RowWrap	  { display:flex; flex-flow:row Wrap;  	   gap:0; align-items:center; justify-content:center; margin:0; padding:0; width:100%; }
+			.flex-RowNowrap   { display:flex; flex-flow:row nowrap;	   gap:0; align-items:center; justify-content:center; margin:0; padding:0; width:100%; }
+			.flex-ColumnWrap  { display:flex; flex-flow:column wrap;   gap:0; align-items:center; justify-content:center; margin:0; padding:0; }
+			.flex-ColumNowrap { display:flex; flex-flow:column nowrap; gap:0; align-items:center; justify-content:center; margin:0; padding:0; }
+			body { gap:5px; margin:0; padding:0; width:100vw; font-size:15px; font-family:courier,monospace,"Roboto","Asap",sans-serif; background-color:#eee; overflow-x:hidden; overflow-y:auto; }
+			.table-Wrapper { align-items:flex-start; position:relative; padding:2em; width:90%; background-color:#000; }
+			.table-Wrapper :is(strong,b,p,hr) { width:100%; font-weight:900; }
+			.table-Wrapper strong { font-size:1.5em; text-align:center; }
+			.table-Wrapper b { padding-left:2em; }
+			.table-Section { justify-content:flex-start; gap:5px 0; position:relative; margin-left:2em; padding:1em; width:calc(100% - 6em); border:1px solid #ccc; border-radius:2px; background:linear-gradient(rgba(255,255,255,0.8),rgba(0,0,0,0.8)); backdrop-filter:blur(10px); box-shadow:0 0 15px 1px rgba(0,0,0,0.5); }
+			.table-Section>span:nth-of-type(3n+1) { flex:0 0 25% }
+			.table-Section>span:nth-of-type(3n+2) { flex:0 1 50% }
+			.table-Section>span:nth-of-type(3n)	  { flex:0 0 25% }
+			.table-Section>code { font-family:courier }
+			.table-Section>code:nth-of-type(2n+1) { flex:0 0 25% }
+			.table-Section>code:nth-of-type(2n) { flex:0 1 75% }
+			</style>
+	</head>
+	<body class="flex-ColumNowrap">
+		<div class="flex-ColumNowrap table-Wrapper">
+		<strong>CSS Selectors 選擇器表</strong>
+		<hr/>
+		<P>選擇器 selector</p>
+		<div class="flex-RowWrap table-Section">
+			<span>*</span><span>選取全部元素</span><span>* { }</span>
+			<span>tagName</span><span>選取所有 html tag 名稱為 tagName 的元素</span><span>div { }</span>
+			<span>.className</span><span>選取所有 class 名稱為 className 的元素</span><span>.myDiv { }</span>
+			<span>#id</span><span>選取指定 id 的元素</span><span>#myDiv { }</span>
+		</div>
+		<div class="flex-RowWrap table-Section">
+			<span>elA,elB</span><span>選取 elA 和 elB</span><span>div,span { }</span>
+			<span>elA+elB</span><span>選取 elA 後面一位 elB 同輩元素</span><span>div+span { }</span>
+			<span>elA~elB</span><span>選取 elA 後面所有 elB 同輩元素</span><span>div span { }</span>
+			<span>elA>elB</span><span>選取 elA 子層所有 elB 子輩元素</span><span>div>span { }</span>
+			<span>elA elB</span><span>選取 elA 以下所有 elB 子孫元素</span><span>div span { }</span>
+		</div>
+		<div class="flex-RowWrap table-Section">
+			<span>el[attr]</span><span>選取有 attr 屬性的元素</span><span>a[target] { }</span>
+			<span>el[attr = value]</span><span>選取有 attr 屬性且屬性值為 value 的元素</span><span>a[target=_blank] { }</span>
+			<span>el[attr ^= value]</span><span>選取有 attr 屬性且屬性值開頭為 value 的元素</span><span>a[href^="https"] { }</span>
+			<span>el[attr $= value]</span><span>選取有 attr 屬性且屬性值結尾為 value 的元素</span><span>a[src$=".png"] { }</span>
+			<span>el[attr ~= value]</span><span>選取有 attr 屬性且屬性值包含 value 的元素</span><span>a[href~="google"] { }</span>
+		</div>
+		<hr/>
+		<P>偽類 pseudo-class</p>
+		<div class="flex-RowWrap table-Section">
+			<span>el:only-child</span><span>選取沒有任何兄弟的 el 元素</span><span>p:only-child { }</span>
+			<span>el:nth-child(n)</span><span>選取每個 el 的元素</span><span>p:nth-child(n) { }</span>
+			<span>el:nth-child(1)</span><span>選取第 1 個、且為 el 的元素 = :first-child</span><span>p:first-child { }</span>
+			<span>el:nth-child(3)</span><span>選取第 3 個、且為 el 的元素</span><span>p:nth-child(3) { }</span>
+			<span>el:nth-child(2n)</span><span>選取每偶數個、且為 el 的元素 = :nth-child(even)</span><span>p:nth-child(even) { }</span>
+			<span>el:nth-child(2n+1)</span><span>選取每奇數個、且為 el 的元素 = :nth-child(odd)</span><span>p:nth-child(odd) { }</span>
+			<span>el:nth-child(3n)</span><span>選取每 3 個、且為 el 的元素 = 3*0,3*1,3*2,3*3...等</span><span>p:nth-child(3n) { }</span>
+			<span>el:nth-child(3n+2)</span><span>選取第 2,5,8...等、且為 el 的元素 = (3×0)+2,(3×1)+2,(3×2)+2...等</span><span>p:nth-child(3n+2) { }</span>
+			<span>el:nth-child(-n+3)</span><span>選取前 3 個、且為 el 的元素 = -0+3,-1+3,-2+3</span><span>p:nth-child(-n+3) { }</span>
+			<span>el:nth-child(n+3)</span><span>選取第 3 個及以後所有、且為 el 的元素 = 0+3,1+3,2+3...等</span><span>p:nth-child(n+3) { }</span>
+			<span>el:nth-last-child(3)</span><span>選取倒數第 3 個、且為 el 的元素</span><span>p:nth-last-child(3) { }</span>
+			<span>el:last-child</span><span>選取最後一個、且為 el 的元素</span><span>p:last-child { }</span>
+			<b>◉ 元素索引從 1 開始，n 從 0 開始</b>
+			<b>◉ el:nth-child(n+3):nth-child(-n+5) = 選取第 3 個到第 5 個、且為 el 的元素</b>
+		</div>
+		<div class="flex-RowWrap table-Section">
+			<span>el:only-of-type</span><span>選取沒有任何兄弟的 el 元素</span><span>p:only-of-type { }</span>
+			<span>el:nth-of-type(n)</span><span>選取同輩每個為 el 的元素</span><span>p:nth-of-type(n) { }</span>
+			<span>el:nth-of-type(1)</span><span>選取同輩為 el 元素中的第 1 個元素 = :first-of-type</span><span>p:first-of-type { }</span>
+			<span>el:nth-of-type(3)</span><span>選取同輩為 el 元素中的第 3 個元素</span><span>p:nth-of-type(3) { }</span>
+			<span>el:nth-of-type(2n)</span><span>選取同輩為 el 元素中的每偶數個元素 = :nth-of-type(even)</span><span>p:nth-of-type(even) { }</span>
+			<span>el:nth-of-type(2n+1)</span><span>選取同輩為 el 元素中的每奇數個元素 = :nth-of-type(odd)</span><span>p:nth-of-type(odd) { }</span>
+			<span>el:nth-of-type(3n)</span><span>選取同輩為 el 元素中的每 3 個元素 = 3*0,3*1,3*2,3*3...等</span><span>p:nth-of-type(3n) { }</span>
+			<span>el:nth-of-type(3n+2)</span><span>選取同輩為 el 元素中的第 2,5,8...等的元素 = (3×0)+2,(3×1)+2...等</span><span>p:nth-of-type(3n+2) { }</span>
+			<span>el:nth-of-type(-n+3)</span><span>選取同輩為 el 元素中的前 3 個元素 = -0+3,-1+3,-2+3</span><span>p:nth-of-type(-n+3) { }</span>
+			<span>el:nth-of-type(n+3)</span><span>選取同輩為 el 元素中的第 3 個及以後所有的元素 = 0+3,1+3,2+3...等</span><span>p:nth-of-type(n+3) { }</span>
+			<span>el:nth-last-of-type(3)</span><span>選取同輩為 el 元素中的倒數第 3 個元素</span><span>p:nth-last-of-type(3) { }</span>
+			<span>el:last-of-type</span><span>選取同輩為 el 元素中的最後一個元素</span><span>p:last-of-type { }</span>
+			<b>◉ 元素索引從 1 開始，n 從 0 開始</b>
+			<b>◉ el:nth-of-type(n+3):nth-of-type(-n+5) = 選取同輩為 el 元素中的第 3 個到第 5 個元素</b>
+		</div>
+		<div class="flex-RowWrap table-Section">
+			<span>:is()</span><span>將選擇器清單作為其參數，並選取該清單中的任何元素</span><span>div:is(p,a) { }</span>
+			<span>:not()</span><span>將選擇器清單作為其參數，並選取與該清單不符的元素</span><span>div>:not(p) { }</span>
+			<span>:not(p,a)</span><span>選取不是 p 或 a 的元素</span><span>div>:not(p,a) { }</span>
+			<span>:has()</span><span>將選擇器清單作為其參數，並選取相對於引用元素的父元素或同級元素</span><span>div:has(p) { }</span>
+			<span>:has(p)</span><span>選取子元素有 p 的元素</span><span>div:has(p) { }</span>
+			<span>:has(p,a)</span><span>選取子元素有 p 或 a 的元素</span><span>div:has(p,a) { }</span>
+			<span>:has(p):has(a)</span><span>選取子元素有 p 跟 a 的元素</span><span>div:has(p):has(a) { }</span>
+			<span>:has(+p)</span><span>選取有 p 緊跟在後的元素</span><span>div:has(+p) { }</span>
+			<span>:has(+p,+a)</span><span>選取有 p 或 a 緊跟在後的元素</span><span>div:has(+p,+a) { }</span>
+			<b>◉ 選擇器清單（一個或逗號分隔多個選擇器的清單）不得包含偽元素</b>
+		</div>
+		<div class="flex-RowWrap table-Section">
+			<span>:link</span><span>選取預設的元素連結</span><span>a:link { }</span>
+			<span>:visited</span><span>選取已點過的元素連結</span><span>a:visited { }</span>
+			<span>:hover</span><span>選取滑鼠移到元素上時</span><span>a:hover { }</span>
+			<span>:active</span><span>選取滑鼠點擊元素到放開之間</span><span>a:active { }</span>
+			<b>◉ 同時定義順序 → a:link,a:visited,a:hover,a:active</b>
+		</div>
+		<div class="flex-RowWrap table-Section">
+			<span>:focus</span><span>選取當前聚焦到的元素</span><span>input:focus { }</span>
+			<span>:focus-visible</span><span>選取元素匹配時聚焦到的元素</span><span>input:focus-visible { }</span>
+			<span>:focus-within</span><span>選取獲得焦點元素或有其後代獲得焦點的元素</span><span>input:focus-within { }</span>
+			<span>:enabled</span><span>選取可作用的元素</span><span>input:enabled { }</span>
+			<span>:disabled</span><span>選取已禁用的元素</span><span>input:disabled { }</span>
+			<span>:default</span><span>選取表單預設選項的元素</span><span>input:default { }</span>
+			<span>:checked</span><span>選取表單選中選項的元素</span><span>input:checked { }</span>
+			<span>:required</span><span>選取表單必填的元素</span><span>input:required { }</span>
+			<span>:optional</span><span>選取表單選填的元素</span><span>input:optional { }</span>
+			<span>:valid</span><span>選取表單驗證為內容有效的元素</span><span>input:valid { }</span>
+			<span>:invalid</span><span>選取表單驗證為內容無效的元素</span><span>input:invalid { }</span>
+			<span>:user-valid</span><span>選取表單與用戶互動後驗證為內容有效的元素</span><span>input:user-valid { }</span>
+			<span>:user-invalid</span><span>選取表單與用戶互動後驗證為內容無效的元素</span><span>input:user-invalid { }</span>
+			<span>:in-range</span><span>選取表單目前值在指定範圍內的元素（屬性 min ~ max）</span><span>input:in-range { }</span>
+			<span>:out-of-range</span><span>選取表單目前值超出指定範圍的元素（屬性 min ~ max）</span><span>input:out-of-range { }</span>
+			<span>:read-write</span><span>選取使用者可以讀寫的元素（例如 input、textarea）</span><span>input:read-write { }</span>
+			<span>:read-only</span><span>選取使用者唯讀的元素（所有不符合 :read-write 的元素）</span><span>input:read-only { }</span>
+		</div>
+		<div class="flex-RowWrap table-Section">
+			<span>:target</span><span>選取當前擁有 id 錨點的目標元素</span><span>#mydiv:target { }</span>
+			<span>:popover-open</span><span>選取處於顯示狀態的 popover 彈框元素</span><span>div:popover-open { }</span>
+			<span>:fullscreen</span><span>選取處於全螢幕模式的每個元素</span><span>div:fullscreen { }</span>
+			<span>:modal</span><span>選取處於排除所有互動狀態的元素，直到互動被消除為止（dialog、:fullscreen）</span><span>:modal { }</span>
+			<b>◉ 使用 Element.requestFullscreen()、Element.exitFullscreen() 切換全螢幕模式</b>
+		</div>
+		<div class="flex-RowWrap table-Section">
+			<span>:root</span><span>選取 document 根元素</span><span>:root { }</span>
+			<span>:empty</span><span>選取沒有子元素、子節點、文字、空格的元素</span><span>div:empty { }</span>
+			<span>:define()</span><span>選取已定義的元素和使用 CustomElementRegistry.define() 定義的自訂元素</span><span>:define { }</span>
+			<span>:state()</span><span>選取處於特定狀態的自訂元素</span><span>my-checkbox:state(checked) { }</span>
+		</div>
+		<div class="flex-RowWrap table-Section">
+			<span>:host</span><span>選取 shadow DOM 的 shadow 主機</span><span>:host { }</span>
+		</div>
+		<hr/>
+		<P>偽元素 pseudo-elements</p>
+		<div class="flex-RowWrap table-Section"> 
+			<span>::after</span><span>在元素內容的最後面插入元素，預設 display: inline-block;</span><span>div::after { content: ''; }</span>
+			<span>::before</span><span>在元素內容的最前面插入元素，預設 display: inline-block;</span><span>div::before { content: ''; }</span>
+			<span>::backdrop</span><span>選取元素被放置到頂層時的背景（popover、dialog）</span><span>dialog::backdrop { }</span>
+		</div>
+		<div class="flex-RowWrap table-Section">
+			<span>::marker</span><span>選取列表元素的項目符號（ul、summary）</span><span>ul::marker { content: '▸'; }</span>
+			<span>::selection</span><span>選取在元素內容裡被反白選取的文字</span><span>p::selection { }</span>
+			<span>::first-letter</span><span>選取在元素內容裡的第一個字母</span><span>p::first-letter { }</span>
+			<span>::first-line</span><span>選取在元素內容裡的第一行</span><span>p::first-line { }</span>
+		</div>
+		<div class="flex-RowWrap table-Section">
+			<span>::placeholder</span><span>選取 input 輸入框元素的提示文字</span><span>input::placeholder { }</span>
+			<span>::file-selector-button</span><span>選取 input[type="file"] 選擇檔案鈕的元素</span><span>input::file-selector-button { }</span>
+			<span>::-webkit-search-cancel-button</span><span>選取 input[type="search"] 搜尋欄中刪除文字的❌圖示</span><span>隱藏 { display: none; }</span>
+		</div>
+		<div class="flex-RowWrap table-Section">
+			<span>::part</span><span>選取在 shadow DOM 中有 part 屬性的元素</span><span>custom-element::part(foo) { }</span>
+			<span>::slotted</span><span>選取在 shadow DOM 的 template 裡有 slot 屬性的元素</span><span>::slotted(*) { }</span>
+		</div>
+		<hr/>
+
+ 		</div>
+	</body>
+	<script type="text/javascript">
+		var colorSection = document.querySelectorAll('.color-Section'),
+			colorHex = document.querySelector('#color-Hex'),
+			colorRGB = document.querySelector('#color-RGB');
+
+		function readCode(e) {
+			if ( e.target.tagName === 'SPAN' ) {
+			colorHex.innerText = e.target.getAttribute('data-hex');
+			colorRGB.innerText = e.target.getAttribute('data-rgba');
+			Array.from(colorSection).forEach(section => { var colorSpan = section.querySelectorAll('span'); Array.from(colorSpan).forEach(span => { span.classList.remove('box-Shine') }) });
+			e.target.classList.add('box-Shine');
+			document.body.setAttribute('style',`background:${e.target.getAttribute('data-hex')}`);
+			}
+		}
+		Array.from(colorSection).forEach(section => { section.addEventListener('click',readCode) });
+
+		function copyCode(e) {
+			navigator.clipboard.writeText(e.target.innerText);
+			e.target.parentElement.classList.add('Copied');
+			setTimeout( function(){ e.target.parentElement.classList.remove('Copied') }, 2000 );
+		}
+		colorHex.addEventListener('click',copyCode);
+		colorRGB.addEventListener('click',copyCode);
+
+//		console.log(e.target.innerText);
+	</script>
+</html>
