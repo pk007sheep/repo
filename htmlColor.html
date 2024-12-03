@@ -9,16 +9,17 @@
 		<title>HTML Color</title>
 		<style type="text/css">
 			@import url("https://fonts.googleapis.com/css2?family=Asap&family=Roboto:ital,wght@0,500;0,900;1,500&display=swap");
-			body { display:flex; flex-flow:column nowrap; gap:5px; align-items:center; justify-content:center; margin:0; padding:0; width:100vw; height:100vh; font-size:15px; font-family:"Roboto","Asap",sans-serif; overflow-x:hidden; overflow-y:auto; user-select:none; }
-			.flex-RowNowrap  { display:flex; flex-flow:row nowrap;  gap:0; align-items:center; justify-content:center; margin:0; padding:0; width:100%; }
-			.flex-ColumnWrap { display:flex; flex-flow:column wrap; gap:0; align-items:center; justify-content:center; margin:0; padding:0; }
+			.flex-RowWrap	  { display:flex; flex-flow:row Wrap;  	   gap:0; align-items:center; justify-content:center; margin:0; padding:0; width:100%; }
+			.flex-RowNowrap   { display:flex; flex-flow:row nowrap;	   gap:0; align-items:center; justify-content:center; margin:0; padding:0; width:100%; }
+			.flex-ColumnWrap  { display:flex; flex-flow:column wrap;   gap:0; align-items:center; justify-content:center; margin:0; padding:0; }
+			.flex-ColumNowrap { display:flex; flex-flow:column nowrap; gap:0; align-items:center; justify-content:center; margin:0; padding:0; }
+			body { width:100vw; height:100vh; font-size:15px; font-family:"Roboto","Asap",courier,monospace,sans-serif; background-image:linear-gradient(45deg,#FF057C 0%,#8D0B93 50%,#321575 100%); overflow-x:hidden; overflow-y:auto; }
 			.color-Wrapper { padding:2em; border-radius:10px; background:linear-gradient(rgba(255,255,255,0.5),rgba(0,0,0,0.5)); backdrop-filter:blur(50px); box-shadow:0 20px 40px 1px rgba(0,0,0,0.5); }
-			.color-Code { padding-bottom:1em; align-items:flex-start; gap:1em; }
-			.color-Code span { position:relative; }
-			.color-Code span.Copied:after { content:"已複製"; opacity:0; position:absolute; top:1em; right:-4em; white-space:nowrap; text-shadow:0 0 3px blue; animation: fadein-fadeout 1s ease-in-out; }
-			@keyframes fadein-fadeout { from { opacity:0; top:1em; } 20% { opacity:1; top:0.5em; } 80% { opacity:1; top:0.5em; } to { opacity:0; top:0; } }
-			.color-Code label { color:#444; }
-			.color-Code strong { display:inline-flex; margin-left:1em; padding:0.5em 1em; width:44em; white-space:nowrap; overflow: hidden; text-overflow:ellipsis; border-radius:5px; cursor:pointer; }
+			.color-Code { justify-content:flex-start; flex:0 0 5.5em; width:100%; }
+			.color-Code span { position:relative; flex:0 0 50%; width:52em; }
+			.color-Code span.Copied:before { content:"已複製"; opacity:0; position:absolute; top:0; left:-1.5em; color:white; font-weight:900; white-space:nowrap; text-shadow:0 0 3px blue; animation: fadein-fadeout 1s ease-in-out; }
+			@keyframes fadein-fadeout { from { opacity:0; top:0.5em; } 20% { opacity:1; top:0; } 80% { opacity:1; top:0; } to { opacity:0; top:-0.5em; } }
+			.color-Code strong { display:block; margin-left:1em; padding:0em 1em; width:100%; white-space:normal; overflow:hidden; text-overflow:ellipsis; border-radius:5px; cursor:pointer; }
 			.color-Div { gap:5px; }
 			.color-Section { height:24em; }
 			.color-Section>span  { flex:0 0 2em; width:2em; height:2em; text-align:center; }
@@ -29,293 +30,294 @@
 									 to { box-shadow:inset -1px -1px 1px 1px #ccc,-1px -1px 1px 1px #ccc } }
 		</style>
 	</head>
-	<body>
+	<body class="flex-ColumNowrap">
 		<span class="color-Wrapper flex-ColumnWrap">
 			<div class="color-Code flex-ColumnWrap">
-				<span><label>Hex</label><strong id="color-Hex">#000000</strong></span><span><label>RGB</label><strong id="color-RGB">rgba(0,0,0,1)</strong></span>
+				<span><strong id="color-Hex"></strong></span><span><strong id="color-RGB"></strong></span>
 			</div>
 			<div class="color-Div flex-RowNowrap">
 				<section class="color-Section flex-ColumnWrap">
 					<span style="background-color:#000000" data-hex="#000000" data-rgba="rgba(0,0,0,1)"></span>
-					<span style="background-color:#272727" data-hex="#272727" data-rgba="待修改"></span>
-					<span style="background-color:#3C3C3C" data-hex="#3C3C3C" data-rgba="待修改"></span>
-					<span style="background-color:#4F4F4F" data-hex="#4F4F4F" data-rgba="待修改"></span>
-					<span style="background-color:#5B5B5B" data-hex="#5B5B5B" data-rgba="待修改"></span>
-					<span style="background-color:#6C6C6C" data-hex="#6C6C6C" data-rgba="待修改"></span>
-					<span style="background-color:#7B7B7B" data-hex="#7B7B7B" data-rgba="待修改"></span>
-					<span style="background-color:#8E8E8E" data-hex="#8E8E8E" data-rgba="待修改"></span>
-					<span style="background-color:#9D9D9D" data-hex="#9D9D9D" data-rgba="待修改"></span>
-					<span style="background-color:#ADADAD" data-hex="#ADADAD" data-rgba="待修改"></span>
-					<span style="background-color:#BEBEBE" data-hex="#BEBEBE" data-rgba="待修改"></span>
-					<span style="background-color:#FFFFFF" data-hex="#FFFFFF" data-rgba="待修改"></span>
+					<span style="background-color:#272727" data-hex="#272727" data-rgba="rgba(39,39,39,1)"></span>
+					<span style="background-color:#3C3C3C" data-hex="#3C3C3C" data-rgba="rgba(60,60,60,1)"></span>
+					<span style="background-color:#4F4F4F" data-hex="#4F4F4F" data-rgba="rgba(79,79,79,1)"></span>
+					<span style="background-color:#5B5B5B" data-hex="#5B5B5B" data-rgba="rgba(91,91,91,1)"></span>
+					<span style="background-color:#6C6C6C" data-hex="#6C6C6C" data-rgba="rgba(108,108,108,1)"></span>
+					<span style="background-color:#7B7B7B" data-hex="#7B7B7B" data-rgba="rgba(123,123,123,1)"></span>
+					<span style="background-color:#8E8E8E" data-hex="#8E8E8E" data-rgba="rgba(142,142,142,1)"></span>
+					<span style="background-color:#9D9D9D" data-hex="#9D9D9D" data-rgba="rgba(157,157,157,1)"></span>
+					<span style="background-color:#ADADAD" data-hex="#ADADAD" data-rgba="rgba(173,173,173,1)"></span>
+					<span style="background-color:#BEBEBE" data-hex="#BEBEBE" data-rgba="rgba(190,190,190,1)"></span>
+					<span style="background-color:#FFFFFF" data-hex="#FFFFFF" data-rgba="rgba(255,255,255,1)"></span>
 
-					<span style="background-color:#2F0000" data-hex="#2F0000" data-rgba="待修改"></span>
-					<span style="background-color:#4D0000" data-hex="#4D0000" data-rgba="待修改"></span>
-					<span style="background-color:#600000" data-hex="#600000" data-rgba="待修改"></span>
-					<span style="background-color:#750000" data-hex="#750000" data-rgba="待修改"></span>
-					<span style="background-color:#930000" data-hex="#930000" data-rgba="待修改"></span>
-					<span style="background-color:#AE0000" data-hex="#AE0000" data-rgba="待修改"></span>
-					<span style="background-color:#CE0000" data-hex="#CE0000" data-rgba="待修改"></span>
-					<span style="background-color:#EA0000" data-hex="#EA0000" data-rgba="待修改"></span>
-					<span style="background-color:#FF0000" data-hex="#FF0000" data-rgba="待修改"></span>
-					<span style="background-color:#FF2D2D" data-hex="#FF2D2D" data-rgba="待修改"></span>
-					<span style="background-color:#FF5151" data-hex="#FF5151" data-rgba="待修改"></span>
-					<span style="background-color:#FF7575" data-hex="#FF7575" data-rgba="待修改"></span>
+					<span style="background-color:#2F0000" data-hex="#2F0000" data-rgba="rgba(47,0,0,1)"></span>
+					<span style="background-color:#4D0000" data-hex="#4D0000" data-rgba="rgba(77,0,0,1)"></span>
+					<span style="background-color:#600000" data-hex="#600000" data-rgba="rgba(96,0,0,1)"></span>
+					<span style="background-color:#750000" data-hex="#750000" data-rgba="rgba(117,0,0,1)"></span>
+					<span style="background-color:#930000" data-hex="#930000" data-rgba="rgba(147,0,0,1)"></span>
+					<span style="background-color:#AE0000" data-hex="#AE0000" data-rgba="rgba(174,0,0,1)"></span>
+					<span style="background-color:#CE0000" data-hex="#CE0000" data-rgba="rgba(206,0,0,1)"></span>
+					<span style="background-color:#EA0000" data-hex="#EA0000" data-rgba="rgba(234,0,0,1)"></span>
+					<span style="background-color:#FF0000" data-hex="#FF0000" data-rgba="rgba(255,0,0,1)"></span>
+					<span style="background-color:#FF2D2D" data-hex="#FF2D2D" data-rgba="rgba(255,45,45,1)"></span>
+					<span style="background-color:#FF5151" data-hex="#FF5151" data-rgba="rgba(255,81,81,1)"></span>
+					<span style="background-color:#FF7575" data-hex="#FF7575" data-rgba="rgba(255,117,117,1)"></span>
 
-					<span style="background-color:#642100" data-hex="#642100" data-rgba="待修改"></span>
-					<span style="background-color:#842B00" data-hex="#842B00" data-rgba="待修改"></span>
-					<span style="background-color:#A23400" data-hex="#A23400" data-rgba="待修改"></span>
-					<span style="background-color:#BB3D00" data-hex="#BB3D00" data-rgba="待修改"></span>
-					<span style="background-color:#D94600" data-hex="#D94600" data-rgba="待修改"></span>
-					<span style="background-color:#F75000" data-hex="#F75000" data-rgba="待修改"></span>
-					<span style="background-color:#FF5809" data-hex="#FF5809" data-rgba="待修改"></span>
-					<span style="background-color:#FF8040" data-hex="#FF8040" data-rgba="待修改"></span>
-					<span style="background-color:#FF8F59" data-hex="#FF8F59" data-rgba="待修改"></span>
-					<span style="background-color:#FF9D6F" data-hex="#FF9D6F" data-rgba="待修改"></span>
-					<span style="background-color:#FFAD86" data-hex="#FFAD86" data-rgba="待修改"></span>
-					<span style="background-color:#FFBD9D" data-hex="#FFBD9D" data-rgba="待修改"></span>
+					<span style="background-color:#642100" data-hex="#642100" data-rgba="rgba(100,33,0,1)"></span>
+					<span style="background-color:#842B00" data-hex="#842B00" data-rgba="rgba(132,43,0,1)"></span>
+					<span style="background-color:#A23400" data-hex="#A23400" data-rgba="rgba(162,52,0,1)"></span>
+					<span style="background-color:#BB3D00" data-hex="#BB3D00" data-rgba="rgba(187,61,0,1)"></span>
+					<span style="background-color:#D94600" data-hex="#D94600" data-rgba="rgba(217,70,0,1)"></span>
+					<span style="background-color:#F75000" data-hex="#F75000" data-rgba="rgba(247,80,0,1)"></span>
+					<span style="background-color:#FF5809" data-hex="#FF5809" data-rgba="rgba(255,88,9,1)"></span>
+					<span style="background-color:#FF8040" data-hex="#FF8040" data-rgba="rgba(255,128,64,1)"></span>
+					<span style="background-color:#FF8F59" data-hex="#FF8F59" data-rgba="rgba(255,143,89,1)"></span>
+					<span style="background-color:#FF9D6F" data-hex="#FF9D6F" data-rgba="rgba(255,157,111,1)"></span>
+					<span style="background-color:#FFAD86" data-hex="#FFAD86" data-rgba="rgba(255,173,134,1)"></span>
+					<span style="background-color:#FFBD9D" data-hex="#FFBD9D" data-rgba="rgba(255,189,157,1)"></span>
 
-					<span style="background-color:#844200" data-hex="#844200" data-rgba="待修改"></span>
-					<span style="background-color:#9F5000" data-hex="#9F5000" data-rgba="待修改"></span>
-					<span style="background-color:#BB5E00" data-hex="#BB5E00" data-rgba="待修改"></span>
-					<span style="background-color:#D26900" data-hex="#D26900" data-rgba="待修改"></span>
-					<span style="background-color:#EA7500" data-hex="#EA7500" data-rgba="待修改"></span>
-					<span style="background-color:#FF8000" data-hex="#FF8000" data-rgba="待修改"></span>
-					<span style="background-color:#FF9224" data-hex="#FF9224" data-rgba="待修改"></span>
-					<span style="background-color:#FFA042" data-hex="#FFA042" data-rgba="待修改"></span>
-					<span style="background-color:#FFAF60" data-hex="#FFAF60" data-rgba="待修改"></span>
-					<span style="background-color:#FFBB77" data-hex="#FFBB77" data-rgba="待修改"></span>
-					<span style="background-color:#FFC78E" data-hex="#FFC78E" data-rgba="待修改"></span>
-					<span style="background-color:#FFD1A4" data-hex="#FFD1A4" data-rgba="待修改"></span>
+					<span style="background-color:#844200" data-hex="#844200" data-rgba="rgba(132,66,0,1)"></span>
+					<span style="background-color:#9F5000" data-hex="#9F5000" data-rgba="rgba(159,80,0,1)"></span>
+					<span style="background-color:#BB5E00" data-hex="#BB5E00" data-rgba="rgba(187,94,0,1)"></span>
+					<span style="background-color:#D26900" data-hex="#D26900" data-rgba="rgba(210,105,0,1)"></span>
+					<span style="background-color:#EA7500" data-hex="#EA7500" data-rgba="rgba(234,117,0,1)"></span>
+					<span style="background-color:#FF8000" data-hex="#FF8000" data-rgba="rgba(255,128,0,1)"></span>
+					<span style="background-color:#FF9224" data-hex="#FF9224" data-rgba="rgba(255,146,36,1)"></span>
+					<span style="background-color:#FFA042" data-hex="#FFA042" data-rgba="rgba(255,160,66,1)"></span>
+					<span style="background-color:#FFAF60" data-hex="#FFAF60" data-rgba="rgba(255,175,96,1)"></span>
+					<span style="background-color:#FFBB77" data-hex="#FFBB77" data-rgba="rgba(255,187,119,1)"></span>
+					<span style="background-color:#FFC78E" data-hex="#FFC78E" data-rgba="rgba(255,199,142,1)"></span>
+					<span style="background-color:#FFD1A4" data-hex="#FFD1A4" data-rgba="rgba(255,209,164,1)"></span>
 
-					<span style="background-color:#5B4B00" data-hex="#5B4B00" data-rgba="待修改"></span>
-					<span style="background-color:#796400" data-hex="#796400" data-rgba="待修改"></span>
-					<span style="background-color:#977C00" data-hex="#977C00" data-rgba="待修改"></span>
-					<span style="background-color:#AE8F00" data-hex="#AE8F00" data-rgba="待修改"></span>
-					<span style="background-color:#C6A300" data-hex="#C6A300" data-rgba="待修改"></span>
-					<span style="background-color:#D9B300" data-hex="#D9B300" data-rgba="待修改"></span>
-					<span style="background-color:#EAC100" data-hex="#EAC100" data-rgba="待修改"></span>
-					<span style="background-color:#FFD306" data-hex="#FFD306" data-rgba="待修改"></span>
-					<span style="background-color:#FFDC35" data-hex="#FFDC35" data-rgba="待修改"></span>
-					<span style="background-color:#FFE153" data-hex="#FFE153" data-rgba="待修改"></span>
-					<span style="background-color:#FFE66F" data-hex="#FFE66F" data-rgba="待修改"></span>
-					<span style="background-color:#FFED97" data-hex="#FFED97" data-rgba="待修改"></span>
+					<span style="background-color:#5B4B00" data-hex="#5B4B00" data-rgba="rgba(91,75,0,1)"></span>
+					<span style="background-color:#796400" data-hex="#796400" data-rgba="rgba(121,100,0,1)"></span>
+					<span style="background-color:#977C00" data-hex="#977C00" data-rgba="rgba(151,124,0,1)"></span>
+					<span style="background-color:#AE8F00" data-hex="#AE8F00" data-rgba="rgba(174,143,0,1)"></span>
+					<span style="background-color:#C6A300" data-hex="#C6A300" data-rgba="rgba(198,163,0,1)"></span>
+					<span style="background-color:#D9B300" data-hex="#D9B300" data-rgba="rgba(217,179,0,1)"></span>
+					<span style="background-color:#EAC100" data-hex="#EAC100" data-rgba="rgba(234,193,0,1)"></span>
+					<span style="background-color:#FFD306" data-hex="#FFD306" data-rgba="rgba(255,211,6,1)"></span>
+					<span style="background-color:#FFDC35" data-hex="#FFDC35" data-rgba="rgba(255,220,53,1)"></span>
+					<span style="background-color:#FFE153" data-hex="#FFE153" data-rgba="rgba(255,225,83,1)"></span>
+					<span style="background-color:#FFE66F" data-hex="#FFE66F" data-rgba="rgba(255,230,111,1)"></span>
+					<span style="background-color:#FFED97" data-hex="#FFED97" data-rgba="rgba(255,237,151,1)"></span>
 
-					<span style="background-color:#424200" data-hex="#424200" data-rgba="待修改"></span>
-					<span style="background-color:#5B5B00" data-hex="#5B5B00" data-rgba="待修改"></span>
-					<span style="background-color:#737300" data-hex="#737300" data-rgba="待修改"></span>
-					<span style="background-color:#8C8C00" data-hex="#8C8C00" data-rgba="待修改"></span>
-					<span style="background-color:#A6A600" data-hex="#A6A600" data-rgba="待修改"></span>
-					<span style="background-color:#C4C400" data-hex="#C4C400" data-rgba="待修改"></span>
-					<span style="background-color:#E1E100" data-hex="#E1E100" data-rgba="待修改"></span>
-					<span style="background-color:#F9F900" data-hex="#F9F900" data-rgba="待修改"></span>
-					<span style="background-color:#FFFF37" data-hex="#FFFF37" data-rgba="待修改"></span>
-					<span style="background-color:#FFFF6F" data-hex="#FFFF6F" data-rgba="待修改"></span>
-					<span style="background-color:#FFFF93" data-hex="#FFFF93" data-rgba="待修改"></span>
-					<span style="background-color:#FFFFAA" data-hex="#FFFFAA" data-rgba="待修改"></span>
+					<span style="background-color:#424200" data-hex="#424200" data-rgba="rgba(66,66,0,1)"></span>
+					<span style="background-color:#5B5B00" data-hex="#5B5B00" data-rgba="rgba(91,91,0,1)"></span>
+					<span style="background-color:#737300" data-hex="#737300" data-rgba="rgba(115,115,0,1)"></span>
+					<span style="background-color:#8C8C00" data-hex="#8C8C00" data-rgba="rgba(140,140,0,1)"></span>
+					<span style="background-color:#A6A600" data-hex="#A6A600" data-rgba="rgba(166,166,0,1)"></span>
+					<span style="background-color:#C4C400" data-hex="#C4C400" data-rgba="rgba(196,196,0,1)"></span>
+					<span style="background-color:#E1E100" data-hex="#E1E100" data-rgba="rgba(225,225,0,1)"></span>
+					<span style="background-color:#F9F900" data-hex="#F9F900" data-rgba="rgba(249,249,0,1)"></span>
+					<span style="background-color:#FFFF37" data-hex="#FFFF37" data-rgba="rgba(255,255,55,1)"></span>
+					<span style="background-color:#FFFF6F" data-hex="#FFFF6F" data-rgba="rgba(255,255,111,1)"></span>
+					<span style="background-color:#FFFF93" data-hex="#FFFF93" data-rgba="rgba(255,255,147,1)"></span>
+					<span style="background-color:#FFFFAA" data-hex="#FFFFAA" data-rgba="rgba(255,255,170,1)"></span>
 
-					<span style="background-color:#467500" data-hex="#467500" data-rgba="待修改"></span>
-					<span style="background-color:#548C00" data-hex="#548C00" data-rgba="待修改"></span>
-					<span style="background-color:#64A600" data-hex="#64A600" data-rgba="待修改"></span>
-					<span style="background-color:#73BF00" data-hex="#73BF00" data-rgba="待修改"></span>
-					<span style="background-color:#82D900" data-hex="#82D900" data-rgba="待修改"></span>
-					<span style="background-color:#8CEA00" data-hex="#8CEA00" data-rgba="待修改"></span>
-					<span style="background-color:#9AFF02" data-hex="#9AFF02" data-rgba="待修改"></span>
-					<span style="background-color:#A8FF24" data-hex="#A8FF24" data-rgba="待修改"></span>
-					<span style="background-color:#B7FF4A" data-hex="#B7FF4A" data-rgba="待修改"></span>
-					<span style="background-color:#C2FF68" data-hex="#C2FF68" data-rgba="待修改"></span>
-					<span style="background-color:#CCFF80" data-hex="#CCFF80" data-rgba="待修改"></span>
-					<span style="background-color:#D3FF93" data-hex="#D3FF93" data-rgba="待修改"></span>
+					<span style="background-color:#467500" data-hex="#467500" data-rgba="rgba(70,117,0,1)"></span>
+					<span style="background-color:#548C00" data-hex="#548C00" data-rgba="rgba(84,140,0,1)"></span>
+					<span style="background-color:#64A600" data-hex="#64A600" data-rgba="rgba(100,166,0,1)"></span>
+					<span style="background-color:#73BF00" data-hex="#73BF00" data-rgba="rgba(115,191,0,1)"></span>
+					<span style="background-color:#82D900" data-hex="#82D900" data-rgba="rgba(130,217,0,1)"></span>
+					<span style="background-color:#8CEA00" data-hex="#8CEA00" data-rgba="rgba(140,234,0,1)"></span>
+					<span style="background-color:#9AFF02" data-hex="#9AFF02" data-rgba="rgba(154,255,2,1)"></span>
+					<span style="background-color:#A8FF24" data-hex="#A8FF24" data-rgba="rgba(168,255,36,1)"></span>
+					<span style="background-color:#B7FF4A" data-hex="#B7FF4A" data-rgba="rgba(183,255,74,1)"></span>
+					<span style="background-color:#C2FF68" data-hex="#C2FF68" data-rgba="rgba(194,255,104,1)"></span>
+					<span style="background-color:#CCFF80" data-hex="#CCFF80" data-rgba="rgba(204,255,128,1)"></span>
+					<span style="background-color:#D3FF93" data-hex="#D3FF93" data-rgba="rgba(211,255,147,1)"></span>
 
-					<span style="background-color:#006000" data-hex="#006000" data-rgba="待修改"></span>
-					<span style="background-color:#007500" data-hex="#007500" data-rgba="待修改"></span>
-					<span style="background-color:#009100" data-hex="#009100" data-rgba="待修改"></span>
-					<span style="background-color:#00A600" data-hex="#00A600" data-rgba="待修改"></span>
-					<span style="background-color:#00BB00" data-hex="#00BB00" data-rgba="待修改"></span>
-					<span style="background-color:#00DB00" data-hex="#00DB00" data-rgba="待修改"></span>
-					<span style="background-color:#00EC00" data-hex="#00EC00" data-rgba="待修改"></span>
-					<span style="background-color:#28FF28" data-hex="#28FF28" data-rgba="待修改"></span>
-					<span style="background-color:#53FF53" data-hex="#53FF53" data-rgba="待修改"></span>
-					<span style="background-color:#79FF79" data-hex="#79FF79" data-rgba="待修改"></span>
-					<span style="background-color:#93FF93" data-hex="#93FF93" data-rgba="待修改"></span>
-					<span style="background-color:#A6FFA6" data-hex="#A6FFA6" data-rgba="待修改"></span>
+					<span style="background-color:#006000" data-hex="#006000" data-rgba="rgba(0,96,0,1)"></span>
+					<span style="background-color:#007500" data-hex="#007500" data-rgba="rgba(0,117,0,1)"></span>
+					<span style="background-color:#009100" data-hex="#009100" data-rgba="rgba(0,145,0,1)"></span>
+					<span style="background-color:#00A600" data-hex="#00A600" data-rgba="rgba(0,166,0,1)"></span>
+					<span style="background-color:#00BB00" data-hex="#00BB00" data-rgba="rgba(0,187,0,1)"></span>
+					<span style="background-color:#00DB00" data-hex="#00DB00" data-rgba="rgba(0,219,0,1)"></span>
+					<span style="background-color:#00EC00" data-hex="#00EC00" data-rgba="rgba(0,236,0,1)"></span>
+					<span style="background-color:#28FF28" data-hex="#28FF28" data-rgba="rgba(40,255,40,1)"></span>
+					<span style="background-color:#53FF53" data-hex="#53FF53" data-rgba="rgba(83,255,83,1)"></span>
+					<span style="background-color:#79FF79" data-hex="#79FF79" data-rgba="rgba(121,255,121,1)"></span>
+					<span style="background-color:#93FF93" data-hex="#93FF93" data-rgba="rgba(147,255,147,1)"></span>
+					<span style="background-color:#A6FFA6" data-hex="#A6FFA6" data-rgba="rgba(166,255,166,1)"></span>
 
-					<span style="background-color:#006030" data-hex="#006030" data-rgba="待修改"></span>
-					<span style="background-color:#01814A" data-hex="#01814A" data-rgba="待修改"></span>
-					<span style="background-color:#019858" data-hex="#019858" data-rgba="待修改"></span>
-					<span style="background-color:#01B468" data-hex="#01B468" data-rgba="待修改"></span>
-					<span style="background-color:#02C874" data-hex="#02C874" data-rgba="待修改"></span>
-					<span style="background-color:#02DF82" data-hex="#02DF82" data-rgba="待修改"></span>
-					<span style="background-color:#02F78E" data-hex="#02F78E" data-rgba="待修改"></span>
-					<span style="background-color:#1AFD9C" data-hex="#1AFD9C" data-rgba="待修改"></span>
-					<span style="background-color:#4EFEB3" data-hex="#4EFEB3" data-rgba="待修改"></span>
-					<span style="background-color:#7AFEC6" data-hex="#7AFEC6" data-rgba="待修改"></span>
-					<span style="background-color:#96FED1" data-hex="#96FED1" data-rgba="待修改"></span>
-					<span style="background-color:#ADFEDC" data-hex="#ADFEDC" data-rgba="待修改"></span>
+					<span style="background-color:#006030" data-hex="#006030" data-rgba="rgba(0,96,48,1)"></span>
+					<span style="background-color:#01814A" data-hex="#01814A" data-rgba="rgba(1,129,74,1)"></span>
+					<span style="background-color:#019858" data-hex="#019858" data-rgba="rgba(1,152,88,1)"></span>
+					<span style="background-color:#01B468" data-hex="#01B468" data-rgba="rgba(1,180,104,1)"></span>
+					<span style="background-color:#02C874" data-hex="#02C874" data-rgba="rgba(2,200,116,1)"></span>
+					<span style="background-color:#02DF82" data-hex="#02DF82" data-rgba="rgba(2,223,130,1)"></span>
+					<span style="background-color:#02F78E" data-hex="#02F78E" data-rgba="rgba(2,247,142,1)"></span>
+					<span style="background-color:#1AFD9C" data-hex="#1AFD9C" data-rgba="rgba(26,253,156,1)"></span>
+					<span style="background-color:#4EFEB3" data-hex="#4EFEB3" data-rgba="rgba(78,254,179,1)"></span>
+					<span style="background-color:#7AFEC6" data-hex="#7AFEC6" data-rgba="rgba(122,254,198,1)"></span>
+					<span style="background-color:#96FED1" data-hex="#96FED1" data-rgba="rgba(150,254,209,1)"></span>
+					<span style="background-color:#ADFEDC" data-hex="#ADFEDC" data-rgba="rgba(173,254,220,1)"></span>
 
-					<span style="background-color:#003E3E" data-hex="#003E3E" data-rgba="待修改"></span>
-					<span style="background-color:#005757" data-hex="#005757" data-rgba="待修改"></span>
-					<span style="background-color:#007979" data-hex="#007979" data-rgba="待修改"></span>
-					<span style="background-color:#009393" data-hex="#009393" data-rgba="待修改"></span>
-					<span style="background-color:#00AEAE" data-hex="#00AEAE" data-rgba="待修改"></span>
-					<span style="background-color:#00CACA" data-hex="#00CACA" data-rgba="待修改"></span>
-					<span style="background-color:#00E3E3" data-hex="#00E3E3" data-rgba="待修改"></span>
-					<span style="background-color:#00FFFF" data-hex="#00FFFF" data-rgba="待修改"></span>
-					<span style="background-color:#4DFFFF" data-hex="#4DFFFF" data-rgba="待修改"></span>
-					<span style="background-color:#80FFFF" data-hex="#80FFFF" data-rgba="待修改"></span>
-					<span style="background-color:#A6FFFF" data-hex="#A6FFFF" data-rgba="待修改"></span>
-					<span style="background-color:#BBFFFF" data-hex="#BBFFFF" data-rgba="待修改"></span>
+					<span style="background-color:#003E3E" data-hex="#003E3E" data-rgba="rgba(0,62,62,1)"></span>
+					<span style="background-color:#005757" data-hex="#005757" data-rgba="rgba(0,87,87,1)"></span>
+					<span style="background-color:#007979" data-hex="#007979" data-rgba="rgba(0,121,121,1)"></span>
+					<span style="background-color:#009393" data-hex="#009393" data-rgba="rgba(0,147,147,1)"></span>
+					<span style="background-color:#00AEAE" data-hex="#00AEAE" data-rgba="rgba(0,174,174,1)"></span>
+					<span style="background-color:#00CACA" data-hex="#00CACA" data-rgba="rgba(0,202,202,1)"></span>
+					<span style="background-color:#00E3E3" data-hex="#00E3E3" data-rgba="rgba(0,227,227,1)"></span>
+					<span style="background-color:#00FFFF" data-hex="#00FFFF" data-rgba="rgba(0,255,255,1)"></span>
+					<span style="background-color:#4DFFFF" data-hex="#4DFFFF" data-rgba="rgba(77,255,255,1)"></span>
+					<span style="background-color:#80FFFF" data-hex="#80FFFF" data-rgba="rgba(128,255,255,1)"></span>
+					<span style="background-color:#A6FFFF" data-hex="#A6FFFF" data-rgba="rgba(166,255,255,1)"></span>
+					<span style="background-color:#BBFFFF" data-hex="#BBFFFF" data-rgba="rgba(187,255,255,1)"></span>
 
-					<span style="background-color:#003060" data-hex="#003060" data-rgba="待修改"></span>
-					<span style="background-color:#003D79" data-hex="#003D79" data-rgba="待修改"></span>
-					<span style="background-color:#004B97" data-hex="#004B97" data-rgba="待修改"></span>
-					<span style="background-color:#005AB5" data-hex="#005AB5" data-rgba="待修改"></span>
-					<span style="background-color:#0066CC" data-hex="#0066CC" data-rgba="待修改"></span>
-					<span style="background-color:#0072E3" data-hex="#0072E3" data-rgba="待修改"></span>
-					<span style="background-color:#0080FF" data-hex="#0080FF" data-rgba="待修改"></span>
-					<span style="background-color:#2894FF" data-hex="#2894FF" data-rgba="待修改"></span>
-					<span style="background-color:#46A3FF" data-hex="#46A3FF" data-rgba="待修改"></span>
-					<span style="background-color:#66B3FF" data-hex="#66B3FF" data-rgba="待修改"></span>
-					<span style="background-color:#84C1FF" data-hex="#84C1FF" data-rgba="待修改"></span>
-					<span style="background-color:#97CBFF" data-hex="#97CBFF" data-rgba="待修改"></span>
+					<span style="background-color:#003060" data-hex="#003060" data-rgba="rgba(0,48,96,1)"></span>
+					<span style="background-color:#003D79" data-hex="#003D79" data-rgba="rgba(0,61,121,1)"></span>
+					<span style="background-color:#004B97" data-hex="#004B97" data-rgba="rgba(0,75,151,1)"></span>
+					<span style="background-color:#005AB5" data-hex="#005AB5" data-rgba="rgba(0,90,181,1)"></span>
+					<span style="background-color:#0066CC" data-hex="#0066CC" data-rgba="rgba(0,102,204,1)"></span>
+					<span style="background-color:#0072E3" data-hex="#0072E3" data-rgba="rgba(0,114,227,1)"></span>
+					<span style="background-color:#0080FF" data-hex="#0080FF" data-rgba="rgba(0,128,255,1)"></span>
+					<span style="background-color:#2894FF" data-hex="#2894FF" data-rgba="rgba(40,148,255,1)"></span>
+					<span style="background-color:#46A3FF" data-hex="#46A3FF" data-rgba="rgba(70,163,255,1)"></span>
+					<span style="background-color:#66B3FF" data-hex="#66B3FF" data-rgba="rgba(102,179,255,1)"></span>
+					<span style="background-color:#84C1FF" data-hex="#84C1FF" data-rgba="rgba(132,193,255,1)"></span>
+					<span style="background-color:#97CBFF" data-hex="#97CBFF" data-rgba="rgba(151,203,255,1)"></span>
 
-					<span style="background-color:#000079" data-hex="#000079" data-rgba="待修改"></span>
-					<span style="background-color:#000093" data-hex="#000093" data-rgba="待修改"></span>
-					<span style="background-color:#0000C6" data-hex="#0000C6" data-rgba="待修改"></span>
-					<span style="background-color:#0000C6" data-hex="#0000C6" data-rgba="待修改"></span>
-					<span style="background-color:#0000E3" data-hex="#0000E3" data-rgba="待修改"></span>
-					<span style="background-color:#2828FF" data-hex="#2828FF" data-rgba="待修改"></span>
-					<span style="background-color:#4A4AFF" data-hex="#4A4AFF" data-rgba="待修改"></span>
-					<span style="background-color:#6A6AFF" data-hex="#6A6AFF" data-rgba="待修改"></span>
-					<span style="background-color:#7D7DFF" data-hex="#7D7DFF" data-rgba="待修改"></span>
-					<span style="background-color:#9393FF" data-hex="#9393FF" data-rgba="待修改"></span>
-					<span style="background-color:#AAAAFF" data-hex="#AAAAFF" data-rgba="待修改"></span>
-					<span style="background-color:#B9B9FF" data-hex="#B9B9FF" data-rgba="待修改"></span>
+					<span style="background-color:#000079" data-hex="#000079" data-rgba="rgba(0,0,121,1)"></span>
+					<span style="background-color:#000093" data-hex="#000093" data-rgba="rgba(0,0,147,1)"></span>
+					<span style="background-color:#0000C6" data-hex="#0000C6" data-rgba="rgba(0,0,198,1)"></span>
+					<span style="background-color:#0000C6" data-hex="#0000C6" data-rgba="rgba(0,0,198,1)"></span>
+					<span style="background-color:#0000E3" data-hex="#0000E3" data-rgba="rgba(0,0,227,1)"></span>
+					<span style="background-color:#2828FF" data-hex="#2828FF" data-rgba="rgba(40,40,255,1)"></span>
+					<span style="background-color:#4A4AFF" data-hex="#4A4AFF" data-rgba="rgba(74,74,255,1)"></span>
+					<span style="background-color:#6A6AFF" data-hex="#6A6AFF" data-rgba="rgba(106,106,255,1)"></span>
+					<span style="background-color:#7D7DFF" data-hex="#7D7DFF" data-rgba="rgba(125,125,255,1)"></span>
+					<span style="background-color:#9393FF" data-hex="#9393FF" data-rgba="rgba(147,147,255,1)"></span>
+					<span style="background-color:#AAAAFF" data-hex="#AAAAFF" data-rgba="rgba(170,170,255,1)"></span>
+					<span style="background-color:#B9B9FF" data-hex="#B9B9FF" data-rgba="rgba(185,185,255,1)"></span>
 
-					<span style="background-color:#28004D" data-hex="#28004D" data-rgba="待修改"></span>
-					<span style="background-color:#3A006F" data-hex="#3A006F" data-rgba="待修改"></span>
-					<span style="background-color:#4B0091" data-hex="#4B0091" data-rgba="待修改"></span>
-					<span style="background-color:#5B00AE" data-hex="#5B00AE" data-rgba="待修改"></span>
-					<span style="background-color:#6F00D2" data-hex="#6F00D2" data-rgba="待修改"></span>
-					<span style="background-color:#8600FF" data-hex="#8600FF" data-rgba="待修改"></span>
-					<span style="background-color:#921AFF" data-hex="#921AFF" data-rgba="待修改"></span>
-					<span style="background-color:#9F35FF" data-hex="#9F35FF" data-rgba="待修改"></span>
-					<span style="background-color:#B15BFF" data-hex="#B15BFF" data-rgba="待修改"></span>
-					<span style="background-color:#BE77FF" data-hex="#BE77FF" data-rgba="待修改"></span>
-					<span style="background-color:#CA8EFF" data-hex="#CA8EFF" data-rgba="待修改"></span>
-					<span style="background-color:#D3A4FF" data-hex="#D3A4FF" data-rgba="待修改"></span>
+					<span style="background-color:#28004D" data-hex="#28004D" data-rgba="rgba(40,0,77,1)"></span>
+					<span style="background-color:#3A006F" data-hex="#3A006F" data-rgba="rgba(58,0,111,1)"></span>
+					<span style="background-color:#4B0091" data-hex="#4B0091" data-rgba="rgba(75,0,145,1)"></span>
+					<span style="background-color:#5B00AE" data-hex="#5B00AE" data-rgba="rgba(91,0,174,1)"></span>
+					<span style="background-color:#6F00D2" data-hex="#6F00D2" data-rgba="rgba(111,0,210,1)"></span>
+					<span style="background-color:#8600FF" data-hex="#8600FF" data-rgba="rgba(134,0,255,1)"></span>
+					<span style="background-color:#921AFF" data-hex="#921AFF" data-rgba="rgba(146,26,255,1)"></span>
+					<span style="background-color:#9F35FF" data-hex="#9F35FF" data-rgba="rgba(159,53,255,1)"></span>
+					<span style="background-color:#B15BFF" data-hex="#B15BFF" data-rgba="rgba(177,91,255,1)"></span>
+					<span style="background-color:#BE77FF" data-hex="#BE77FF" data-rgba="rgba(190,119,255,1)"></span>
+					<span style="background-color:#CA8EFF" data-hex="#CA8EFF" data-rgba="rgba(202,142,255,1)"></span>
+					<span style="background-color:#D3A4FF" data-hex="#D3A4FF" data-rgba="rgba(211,164,255,1)"></span>
 
-					<span style="background-color:#460046" data-hex="#460046" data-rgba="待修改"></span>
-					<span style="background-color:#5E005E" data-hex="#5E005E" data-rgba="待修改"></span>
-					<span style="background-color:#750075" data-hex="#750075" data-rgba="待修改"></span>
-					<span style="background-color:#930093" data-hex="#930093" data-rgba="待修改"></span>
-					<span style="background-color:#AE00AE" data-hex="#AE00AE" data-rgba="待修改"></span>
-					<span style="background-color:#D200D2" data-hex="#D200D2" data-rgba="待修改"></span>
-					<span style="background-color:#E800E8" data-hex="#E800E8" data-rgba="待修改"></span>
-					<span style="background-color:#FF00FF" data-hex="#FF00FF" data-rgba="待修改"></span>
-					<span style="background-color:#FF44FF" data-hex="#FF44FF" data-rgba="待修改"></span>
-					<span style="background-color:#FF77FF" data-hex="#FF77FF" data-rgba="待修改"></span>
-					<span style="background-color:#FF8EFF" data-hex="#FF8EFF" data-rgba="待修改"></span>
-					<span style="background-color:#FFA6FF" data-hex="#FFA6FF" data-rgba="待修改"></span>
+					<span style="background-color:#460046" data-hex="#460046" data-rgba="rgba(70,0,70,1)"></span>
+					<span style="background-color:#5E005E" data-hex="#5E005E" data-rgba="rgba(94,0,94,1)"></span>
+					<span style="background-color:#750075" data-hex="#750075" data-rgba="rgba(117,0,117,1)"></span>
+					<span style="background-color:#930093" data-hex="#930093" data-rgba="rgba(147,0,147,1)"></span>
+					<span style="background-color:#AE00AE" data-hex="#AE00AE" data-rgba="rgba(174,0,174,1)"></span>
+					<span style="background-color:#D200D2" data-hex="#D200D2" data-rgba="rgba(210,0,210,1)"></span>
+					<span style="background-color:#E800E8" data-hex="#E800E8" data-rgba="rgba(232,0,232,1)"></span>
+					<span style="background-color:#FF00FF" data-hex="#FF00FF" data-rgba="rgba(255,0,255,1)"></span>
+					<span style="background-color:#FF44FF" data-hex="#FF44FF" data-rgba="rgba(255,68,255,1)"></span>
+					<span style="background-color:#FF77FF" data-hex="#FF77FF" data-rgba="rgba(255,119,255,1)"></span>
+					<span style="background-color:#FF8EFF" data-hex="#FF8EFF" data-rgba="rgba(255,142,255,1)"></span>
+					<span style="background-color:#FFA6FF" data-hex="#FFA6FF" data-rgba="rgba(255,166,255,1)"></span>
 
-					<span style="background-color:#600030" data-hex="#600030" data-rgba="待修改"></span>
-					<span style="background-color:#820041" data-hex="#820041" data-rgba="待修改"></span>
-					<span style="background-color:#9F0050" data-hex="#9F0050" data-rgba="待修改"></span>
-					<span style="background-color:#BF0060" data-hex="#BF0060" data-rgba="待修改"></span>
-					<span style="background-color:#D9006C" data-hex="#D9006C" data-rgba="待修改"></span>
-					<span style="background-color:#F00078" data-hex="#F00078" data-rgba="待修改"></span>
-					<span style="background-color:#FF0080" data-hex="#FF0080" data-rgba="待修改"></span>
-					<span style="background-color:#FF359A" data-hex="#FF359A" data-rgba="待修改"></span>
-					<span style="background-color:#FF60AF" data-hex="#FF60AF" data-rgba="待修改"></span>
-					<span style="background-color:#FF79BC" data-hex="#FF79BC" data-rgba="待修改"></span>
-					<span style="background-color:#FF95CA" data-hex="#FF95CA" data-rgba="待修改"></span>
-					<span style="background-color:#FFAAD5" data-hex="#FFAAD5" data-rgba="待修改"></span>
+					<span style="background-color:#600030" data-hex="#600030" data-rgba="rgba(96,0,48,1)"></span>
+					<span style="background-color:#820041" data-hex="#820041" data-rgba="rgba(130,0,65,1)"></span>
+					<span style="background-color:#9F0050" data-hex="#9F0050" data-rgba="rgba(159,0,80,1)"></span>
+					<span style="background-color:#BF0060" data-hex="#BF0060" data-rgba="rgba(191,0,96,1)"></span>
+					<span style="background-color:#D9006C" data-hex="#D9006C" data-rgba="rgba(217,0,108,1)"></span>
+					<span style="background-color:#F00078" data-hex="#F00078" data-rgba="rgba(240,0,120,1)"></span>
+					<span style="background-color:#FF0080" data-hex="#FF0080" data-rgba="rgba(255,0,128,1)"></span>
+					<span style="background-color:#FF359A" data-hex="#FF359A" data-rgba="rgba(255,53,154,1)"></span>
+					<span style="background-color:#FF60AF" data-hex="#FF60AF" data-rgba="rgba(255,96,175,1)"></span>
+					<span style="background-color:#FF79BC" data-hex="#FF79BC" data-rgba="rgba(255,121,188,1)"></span>
+					<span style="background-color:#FF95CA" data-hex="#FF95CA" data-rgba="rgba(255,149,202,1)"></span>
+					<span style="background-color:#FFAAD5" data-hex="#FFAAD5" data-rgba="rgba(255,170,213,1)"></span>
 				</section>
 				<section class="color-Section flex-ColumnWrap">
-					<span style="background-color:#613030" data-hex="#613030" data-rgba="待修改"></span>
-					<span style="background-color:#743A3A" data-hex="#743A3A" data-rgba="待修改"></span>
-					<span style="background-color:#804040" data-hex="#804040" data-rgba="待修改"></span>
-					<span style="background-color:#984B4B" data-hex="#984B4B" data-rgba="待修改"></span>
-					<span style="background-color:#AD5A5A" data-hex="#AD5A5A" data-rgba="待修改"></span>
-					<span style="background-color:#B87070" data-hex="#B87070" data-rgba="待修改"></span>
-					<span style="background-color:#C48888" data-hex="#C48888" data-rgba="待修改"></span>
-					<span style="background-color:#CF9E9E" data-hex="#CF9E9E" data-rgba="待修改"></span>
-					<span style="background-color:#D9B3B3" data-hex="#D9B3B3" data-rgba="待修改"></span>
-					<span style="background-color:#E1C4C4" data-hex="#E1C4C4" data-rgba="待修改"></span>
-					<span style="background-color:#EBD6D6" data-hex="#EBD6D6" data-rgba="待修改"></span>
-					<span style="background-color:#F2E6E6" data-hex="#F2E6E6" data-rgba="待修改"></span>
+					<span style="background-color:#613030" data-hex="#613030" data-rgba="rgba(97,48,48,1)"></span>
+					<span style="background-color:#743A3A" data-hex="#743A3A" data-rgba="rgba(116,58,58,1)"></span>
+					<span style="background-color:#804040" data-hex="#804040" data-rgba="rgba(128,64,64,1)"></span>
+					<span style="background-color:#984B4B" data-hex="#984B4B" data-rgba="rgba(152,75,75,1)"></span>
+					<span style="background-color:#AD5A5A" data-hex="#AD5A5A" data-rgba="rgba(173,90,90,1)"></span>
+					<span style="background-color:#B87070" data-hex="#B87070" data-rgba="rgba(184,112,112,1)"></span>
+					<span style="background-color:#C48888" data-hex="#C48888" data-rgba="rgba(196,136,136,1)"></span>
+					<span style="background-color:#CF9E9E" data-hex="#CF9E9E" data-rgba="rgba(207,158,158,1)"></span>
+					<span style="background-color:#D9B3B3" data-hex="#D9B3B3" data-rgba="rgba(217,179,179,1)"></span>
+					<span style="background-color:#E1C4C4" data-hex="#E1C4C4" data-rgba="rgba(225,196,196,1)"></span>
+					<span style="background-color:#EBD6D6" data-hex="#EBD6D6" data-rgba="rgba(235,214,214,1)"></span>
+					<span style="background-color:#F2E6E6" data-hex="#F2E6E6" data-rgba="rgba(242,230,230,1)"></span>
 
-					<span style="background-color:#616130" data-hex="#616130" data-rgba="待修改"></span>
-					<span style="background-color:#707038" data-hex="#707038" data-rgba="待修改"></span>
-					<span style="background-color:#808040" data-hex="#808040" data-rgba="待修改"></span>
-					<span style="background-color:#949449" data-hex="#949449" data-rgba="待修改"></span>
-					<span style="background-color:#A5A552" data-hex="#A5A552" data-rgba="待修改"></span>
-					<span style="background-color:#AFAF61" data-hex="#AFAF61" data-rgba="待修改"></span>
-					<span style="background-color:#B9B973" data-hex="#B9B973" data-rgba="待修改"></span>
-					<span style="background-color:#C2C287" data-hex="#C2C287" data-rgba="待修改"></span>
-					<span style="background-color:#CDCD9A" data-hex="#CDCD9A" data-rgba="待修改"></span>
-					<span style="background-color:#D6D6AD" data-hex="#D6D6AD" data-rgba="待修改"></span>
-					<span style="background-color:#DEDEBE" data-hex="#DEDEBE" data-rgba="待修改"></span>
-					<span style="background-color:#E8E8D0" data-hex="#E8E8D0" data-rgba="待修改"></span>
+					<span style="background-color:#616130" data-hex="#616130" data-rgba="rgba(97,97,48,1)"></span>
+					<span style="background-color:#707038" data-hex="#707038" data-rgba="rgba(112,112,56,1)"></span>
+					<span style="background-color:#808040" data-hex="#808040" data-rgba="rgba(128,128,64,1)"></span>
+					<span style="background-color:#949449" data-hex="#949449" data-rgba="rgba(148,148,73,1)"></span>
+					<span style="background-color:#A5A552" data-hex="#A5A552" data-rgba="rgba(165,165,82,1)"></span>
+					<span style="background-color:#AFAF61" data-hex="#AFAF61" data-rgba="rgba(175,175,97,1)"></span>
+					<span style="background-color:#B9B973" data-hex="#B9B973" data-rgba="rgba(185,185,115,1)"></span>
+					<span style="background-color:#C2C287" data-hex="#C2C287" data-rgba="rgba(194,194,135,1)"></span>
+					<span style="background-color:#CDCD9A" data-hex="#CDCD9A" data-rgba="rgba(205,205,154,1)"></span>
+					<span style="background-color:#D6D6AD" data-hex="#D6D6AD" data-rgba="rgba(214,214,173,1)"></span>
+					<span style="background-color:#DEDEBE" data-hex="#DEDEBE" data-rgba="rgba(222,222,190,1)"></span>
+					<span style="background-color:#E8E8D0" data-hex="#E8E8D0" data-rgba="rgba(232,232,208,1)"></span>
 
-					<span style="background-color:#336666" data-hex="#336666" data-rgba="待修改"></span>
-					<span style="background-color:#3D7878" data-hex="#3D7878" data-rgba="待修改"></span>
-					<span style="background-color:#408080" data-hex="#408080" data-rgba="待修改"></span>
-					<span style="background-color:#4F9D9D" data-hex="#4F9D9D" data-rgba="待修改"></span>
-					<span style="background-color:#5CADAD" data-hex="#5CADAD" data-rgba="待修改"></span>
-					<span style="background-color:#6FB7B7" data-hex="#6FB7B7" data-rgba="待修改"></span>
-					<span style="background-color:#81C0C0" data-hex="#81C0C0" data-rgba="待修改"></span>
-					<span style="background-color:#95CACA" data-hex="#95CACA" data-rgba="待修改"></span>
-					<span style="background-color:#A3D1D1" data-hex="#A3D1D1" data-rgba="待修改"></span>
-					<span style="background-color:#B3D9D9" data-hex="#B3D9D9" data-rgba="待修改"></span>
-					<span style="background-color:#C4E1E1" data-hex="#C4E1E1" data-rgba="待修改"></span>
-					<span style="background-color:#D1E9E9" data-hex="#D1E9E9" data-rgba="待修改"></span>
+					<span style="background-color:#336666" data-hex="#336666" data-rgba="rgba(51,102,102,1)"></span>
+					<span style="background-color:#3D7878" data-hex="#3D7878" data-rgba="rgba(61,120,120,1)"></span>
+					<span style="background-color:#408080" data-hex="#408080" data-rgba="rgba(64,128,128,1)"></span>
+					<span style="background-color:#4F9D9D" data-hex="#4F9D9D" data-rgba="rgba(79,157,157,1)"></span>
+					<span style="background-color:#5CADAD" data-hex="#5CADAD" data-rgba="rgba(92,173,173,1)"></span>
+					<span style="background-color:#6FB7B7" data-hex="#6FB7B7" data-rgba="rgba(111,183,183,1)"></span>
+					<span style="background-color:#81C0C0" data-hex="#81C0C0" data-rgba="rgba(129,192,192,1)"></span>
+					<span style="background-color:#95CACA" data-hex="#95CACA" data-rgba="rgba(149,202,202,1)"></span>
+					<span style="background-color:#A3D1D1" data-hex="#A3D1D1" data-rgba="rgba(163,209,209,1)"></span>
+					<span style="background-color:#B3D9D9" data-hex="#B3D9D9" data-rgba="rgba(179,217,217,1)"></span>
+					<span style="background-color:#C4E1E1" data-hex="#C4E1E1" data-rgba="rgba(196,225,225,1)"></span>
+					<span style="background-color:#D1E9E9" data-hex="#D1E9E9" data-rgba="rgba(209,233,233,1)"></span>
 
-					<span style="background-color:#484891" data-hex="#484891" data-rgba="待修改"></span>
-					<span style="background-color:#5151A2" data-hex="#5151A2" data-rgba="待修改"></span>
-					<span style="background-color:#5A5AAD" data-hex="#5A5AAD" data-rgba="待修改"></span>
-					<span style="background-color:#7373B9" data-hex="#7373B9" data-rgba="待修改"></span>
-					<span style="background-color:#8080C0" data-hex="#8080C0" data-rgba="待修改"></span>
-					<span style="background-color:#9999CC" data-hex="#9999CC" data-rgba="待修改"></span>
-					<span style="background-color:#A6A6D2" data-hex="#A6A6D2" data-rgba="待修改"></span>
-					<span style="background-color:#B8B8DC" data-hex="#B8B8DC" data-rgba="待修改"></span>
-					<span style="background-color:#C7C7E2" data-hex="#C7C7E2" data-rgba="待修改"></span>
-					<span style="background-color:#D8D8EB" data-hex="#D8D8EB" data-rgba="待修改"></span>
-					<span style="background-color:#E6E6F2" data-hex="#E6E6F2" data-rgba="待修改"></span>
-					<span style="background-color:#F3F3FA" data-hex="#F3F3FA" data-rgba="待修改"></span>
+					<span style="background-color:#484891" data-hex="#484891" data-rgba="rgba(72,72,145,1)"></span>
+					<span style="background-color:#5151A2" data-hex="#5151A2" data-rgba="rgba(81,81,162,1)"></span>
+					<span style="background-color:#5A5AAD" data-hex="#5A5AAD" data-rgba="rgba(90,90,173,1)"></span>
+					<span style="background-color:#7373B9" data-hex="#7373B9" data-rgba="rgba(115,115,185,1)"></span>
+					<span style="background-color:#8080C0" data-hex="#8080C0" data-rgba="rgba(128,128,192,1)"></span>
+					<span style="background-color:#9999CC" data-hex="#9999CC" data-rgba="rgba(153,153,204,1)"></span>
+					<span style="background-color:#A6A6D2" data-hex="#A6A6D2" data-rgba="rgba(166,166,210,1)"></span>
+					<span style="background-color:#B8B8DC" data-hex="#B8B8DC" data-rgba="rgba(184,184,220,1)"></span>
+					<span style="background-color:#C7C7E2" data-hex="#C7C7E2" data-rgba="rgba(199,199,226,1)"></span>
+					<span style="background-color:#D8D8EB" data-hex="#D8D8EB" data-rgba="rgba(216,216,235,1)"></span>
+					<span style="background-color:#E6E6F2" data-hex="#E6E6F2" data-rgba="rgba(230,230,242,1)"></span>
+					<span style="background-color:#F3F3FA" data-hex="#F3F3FA" data-rgba="rgba(243,243,250,1)"></span>
 
-					<span style="background-color:#6C3365" data-hex="#6C3365" data-rgba="待修改"></span>
-					<span style="background-color:#7E3D76" data-hex="#7E3D76" data-rgba="待修改"></span>
-					<span style="background-color:#8F4586" data-hex="#8F4586" data-rgba="待修改"></span>
-					<span style="background-color:#9F4D95" data-hex="#9F4D95" data-rgba="待修改"></span>
-					<span style="background-color:#AE57A4" data-hex="#AE57A4" data-rgba="待修改"></span>
-					<span style="background-color:#B766AD" data-hex="#B766AD" data-rgba="待修改"></span>
-					<span style="background-color:#C07AB8" data-hex="#C07AB8" data-rgba="待修改"></span>
-					<span style="background-color:#CA8EC2" data-hex="#CA8EC2" data-rgba="待修改"></span>
-					<span style="background-color:#D2A2CC" data-hex="#D2A2CC" data-rgba="待修改"></span>
-					<span style="background-color:#DAB1D5" data-hex="#DAB1D5" data-rgba="待修改"></span>
-					<span style="background-color:#E2C2DE" data-hex="#E2C2DE" data-rgba="待修改"></span>
-					<span style="background-color:#EBD3E8" data-hex="#EBD3E8" data-rgba="待修改"></span>
+					<span style="background-color:#6C3365" data-hex="#6C3365" data-rgba="rgba(108,51,101,1)"></span>
+					<span style="background-color:#7E3D76" data-hex="#7E3D76" data-rgba="rgba(126,61,118,1)"></span>
+					<span style="background-color:#8F4586" data-hex="#8F4586" data-rgba="rgba(143,69,134,1)"></span>
+					<span style="background-color:#9F4D95" data-hex="#9F4D95" data-rgba="rgba(159,77,149,1)"></span>
+					<span style="background-color:#AE57A4" data-hex="#AE57A4" data-rgba="rgba(174,87,164,1)"></span>
+					<span style="background-color:#B766AD" data-hex="#B766AD" data-rgba="rgba(183,102,173,1)"></span>
+					<span style="background-color:#C07AB8" data-hex="#C07AB8" data-rgba="rgba(192,122,184,1)"></span>
+					<span style="background-color:#CA8EC2" data-hex="#CA8EC2" data-rgba="rgba(202,142,194,1)"></span>
+					<span style="background-color:#D2A2CC" data-hex="#D2A2CC" data-rgba="rgba(210,162,204,1)"></span>
+					<span style="background-color:#DAB1D5" data-hex="#DAB1D5" data-rgba="rgba(218,177,213,1)"></span>
+					<span style="background-color:#E2C2DE" data-hex="#E2C2DE" data-rgba="rgba(226,194,222,1)"></span>
+					<span style="background-color:#EBD3E8" data-hex="#EBD3E8" data-rgba="rgba(235,211,232,1)"></span>
 				</section>
-				<section class="color-Section flex-ColumnWrap color-Gradient">
-					<span style="background-image:linear-gradient(rgba(255,255,255,0.1),rgba(0,0,0,0.5)); backdrop-filter:blur(15px); box-shadow:0 20px 40px 1px rgba(0,0,0,0.12);" data-hex="linear-gradient(rgba(255,255,255,0.1),rgba(0,0,0,0.5)); backdrop-filter:blur(15px); box-shadow:0 20px 40px 1px rgba(0,0,0,0.12)" data-rgba="待修改">毛玻璃</span>
-					<span style="background-image:linear-gradient(45deg,#434343 0%,black 100%);" data-hex="linear-gradient(45deg,#434343 0%,black 100%)" data-rgba="待修改"></span>
-					<span style="background-image:linear-gradient(45deg,#323232 0%,#3F3F3F 40%,#1C1C1C 150%),linear-gradient(45deg,rgba(255,255,255,0.40) 0%,rgba(0,0,0,0.25) 200%)" data-hex="linear-gradient(45deg,#323232 0%,#3F3F3F 40%,#1C1C1C 150%),linear-gradient(to top,rgba(255,255,255,0.40) 0%,rgba(0,0,0,0.25) 200%); background-blend-mode:darken" data-rgba="待修改"></span>
-					<span style="background-image:linear-gradient(45deg,rgba(255,244,228,1) 7.1%,rgba(240,246,238,1) 67.4%);" data-hex="linear-gradient(45deg,rgba(255,244,228,1) 7.1%,rgba(240,246,238,1) 67.4%)" data-rgba="待修改"></span>
-					<span style="background-image:linear-gradient(45deg,#dad4ec 0%,#dad4ec 1%,#f3e7e9 100%);" data-hex="linear-gradient(45deg,#dad4ec 0%,#dad4ec 1%,#f3e7e9 100%)" data-rgba="待修改"></span>
-					<span style="background-image:linear-gradient(45deg,#93a5cf 0%,#e4efe9 100%);" data-hex="linear-gradient(45deg,#93a5cf 0%,#e4efe9 100%)" data-rgba="待修改"></span>
-					<span style="background-image:linear-gradient(45deg,#eea2a2 0%,#bbc1bf 19%,#57c6e1 42%,#b49fda 79%,#7ac5d8 100%);" data-hex="linear-gradient(45deg,#eea2a2 0%,#bbc1bf 19%,#57c6e1 42%,#b49fda 79%,#7ac5d8 100%)" data-rgba="待修改"></span>
-					<span style="background-image:linear-gradient(45deg,#FFBAC3 0%,#C5C1FF 56%,#2CD8D5 100%);" data-hex="linear-gradient(45deg,#2CD8D5 0%,#C5C1FF 56%,#FFBAC3 100%)" data-rgba="待修改"></span>
-					<span style="background-image:linear-gradient(45deg,#f79533,#f37055,#ef4e7b,#a166ab,#5073b8,#1098ad,#07b39b,#6fba82)" data-hex="linear-gradient(45deg,#f79533,#f37055,#ef4e7b,#a166ab,#5073b8,#1098ad,#07b39b,#6fba82)" data-rgba="待修改"></span>
-					<span style="background-image:linear-gradient(45deg,#FF057C 0%,#8D0B93 50%,#321575 100%);" data-hex="linear-gradient(45deg,#FF057C 0%,#8D0B93 50%,#321575 100%)" data-rgba="待修改"></span>
-					<span style="background-image:linear-gradient(45deg,rgba(217,9,27,1) 6.9%,rgba(22,68,150,1) 75%);" data-hex="linear-gradient(45deg,rgba(217,9,27,1) 6.9%,rgba(22,68,150,1) 75%)" data-rgba="待修改"></span>
-					<span style="background-image:linear-gradient(45deg,#FFF800 0%,#FF1361 29%,#44107A 67%,#231557 100%);" data-hex="linear-gradient(45deg,#231557 0%,#44107A 29%,#FF1361 67%,#FFF800 100%)" data-rgba="待修改"></span>
-					<span style="background-image:linear-gradient(45deg,#FDBB2D 0%,#3A1C71 100%);" data-hex="linear-gradient(45deg,#FDBB2D 0%,#3A1C71 100%)" data-rgba="待修改"></span>
-					<span style="background-image:linear-gradient(45deg,#4CAF50,#ff9800)" data-hex="linear-gradient(45deg,#4CAF50,#ff9800)" data-rgba="待修改"></span>
-					<span style="background-image:linear-gradient(45deg,limegreen,transparent),linear-gradient(165deg,skyblue,transparent),linear-gradient(285deg,coral,transparent)" data-hex="linear-gradient(45deg,limegreen,transparent),linear-gradient(165deg,skyblue,transparent),linear-gradient(-285deg,coral,transparent)" data-rgba="待修改"></span>
-					<span style="background-image:linear-gradient(45deg,rgba(181,149,208,1) 3.2%,rgba(251,148,207,1) 9.9%,rgba(181,149,208,1) 22.9%,rgba(251,148,207,1) 36.4%,rgba(181,149,208,1) 50.1%,rgba(251,148,207,1) 61.1%,rgba(181,149,208,1) 71.2%,rgba(251,148,207,1) 84.2%,rgba(181,149,208,1) 92.2%);" data-hex="linear-gradient(45deg,rgba(181,149,208,1) 3.2%,rgba(251,148,207,1) 9.9%,rgba(181,149,208,1) 22.9%,rgba(251,148,207,1) 36.4%,rgba(181,149,208,1) 50.1%,rgba(251,148,207,1) 61.1%,rgba(181,149,208,1) 71.2%,rgba(251,148,207,1) 84.2%,rgba(181,149,208,1) 92.2%)" data-rgba="待修改"></span>
+				<section class="color-Section color-Gradient flex-ColumnWrap">
+					<span style="background-image:linear-gradient(rgba(255,255,255,0.1),rgba(0,0,0,0.5)); backdrop-filter:blur(15px); box-shadow:0 20px 40px 1px rgba(0,0,0,0.12);" data-hex="linear-gradient(rgba(255,255,255,0.1),rgba(0,0,0,0.5)); backdrop-filter:blur(15px); box-shadow:0 20px 40px 1px rgba(0,0,0,0.12)" data-rgba="">毛玻璃</span>
+					<span style="background-image:linear-gradient(45deg,#434343 0%,black 100%);" data-hex="linear-gradient(45deg,#434343 0%,black 100%)" data-rgba=""></span>
+					<span style="background-image:linear-gradient(45deg,#323232 0%,#3F3F3F 40%,#1C1C1C 150%),linear-gradient(45deg,rgba(255,255,255,0.40) 0%,rgba(0,0,0,0.25) 200%)" data-hex="linear-gradient(45deg,#323232 0%,#3F3F3F 40%,#1C1C1C 150%), linear-gradient(225deg,rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%); background-blend-mode:darken" data-rgba=""></span>
+					<span style="background-image:linear-gradient(45deg,rgba(255,244,228,1) 7.1%,rgba(240,246,238,1) 67.4%);" data-hex="linear-gradient(45deg,rgba(255,244,228,1) 7.1%,rgba(240,246,238,1) 67.4%)" data-rgba=""></span>
+					<span style="background-image:linear-gradient(45deg,#dad4ec 0%,#dad4ec 1%,#f3e7e9 100%);" data-hex="linear-gradient(45deg,#dad4ec 0%,#dad4ec 1%,#f3e7e9 100%)" data-rgba=""></span>
+					<span style="background-image:linear-gradient(45deg,#93a5cf 0%,#e4efe9 100%);" data-hex="linear-gradient(45deg,#93a5cf 0%,#e4efe9 100%)" data-rgba=""></span>
+					<span style="background-image:linear-gradient(45deg,#eea2a2 0%,#bbc1bf 19%,#57c6e1 42%,#b49fda 79%,#7ac5d8 100%);" data-hex="linear-gradient(45deg,#eea2a2 0%,#bbc1bf 19%,#57c6e1 42%,#b49fda 79%,#7ac5d8 100%)" data-rgba=""></span>
+					<span style="background-image:linear-gradient(45deg,#FFBAC3 0%,#C5C1FF 56%,#2CD8D5 100%);" data-hex="linear-gradient(45deg,#2CD8D5 0%,#C5C1FF 56%,#FFBAC3 100%)" data-rgba=""></span>
+					<span style="background-image:linear-gradient(45deg,#f79533,#f37055,#ef4e7b,#a166ab,#5073b8,#1098ad,#07b39b,#6fba82)" data-hex="linear-gradient(45deg,#f79533,#f37055,#ef4e7b,#a166ab,#5073b8,#1098ad,#07b39b,#6fba82)" data-rgba=""></span>
+					<span style="background-image:linear-gradient(45deg,#FF057C 0%,#8D0B93 50%,#321575 100%);" data-hex="linear-gradient(45deg,#FF057C 0%,#8D0B93 50%,#321575 100%)" data-rgba=""></span>
+					<span style="background-image:linear-gradient(45deg,rgba(217,9,27,1) 6.9%,rgba(22,68,150,1) 75%);" data-hex="linear-gradient(45deg,rgba(217,9,27,1) 6.9%,rgba(22,68,150,1) 75%)" data-rgba=""></span>
+					<span style="background-image:linear-gradient(45deg,#FFF800 0%,#FF1361 29%,#44107A 67%,#231557 100%);" data-hex="linear-gradient(45deg,#231557 0%,#44107A 29%,#FF1361 67%,#FFF800 100%)" data-rgba=""></span>
+					<span style="background-image:linear-gradient(45deg,#FDBB2D 0%,#3A1C71 100%);" data-hex="linear-gradient(45deg,#FDBB2D 0%,#3A1C71 100%)" data-rgba=""></span>
+					<span style="background-image:linear-gradient(45deg,#4CAF50,#ff9800)" data-hex="linear-gradient(45deg,#4CAF50,#ff9800)" data-rgba=""></span>
+					<span style="background-image:linear-gradient(45deg,limegreen,transparent),linear-gradient(165deg,skyblue,transparent),linear-gradient(285deg,coral,transparent)" data-hex="linear-gradient(45deg,limegreen,transparent), linear-gradient(165deg,skyblue,transparent), linear-gradient(-285deg,coral,transparent)" data-rgba=""></span>
+					<span style="background-image:linear-gradient(45deg,rgba(181,149,208,1) 0%,rgba(251,148,207,1) 10%,rgba(181,149,208,1) 20%,rgba(251,148,207,1) 30%,rgba(181,149,208,1) 40%,rgba(251,148,207,1) 50%,rgba(181,149,208,1) 60%,rgba(251,148,207,1) 70%,rgba(181,149,208,1) 80%,rgba(251,148,207,1) 90%,rgba(181,149,208,1) 100%);" data-hex="linear-gradient(45deg,rgba(181,149,208,1) 0%,rgba(251,148,207,1) 10%,rgba(181,149,208,1) 20%,rgba(251,148,207,1) 30%,rgba(181,149,208,1) 40%,rgba(251,148,207,1) 50%,rgba(181,149,208,1) 60%,rgba(251,148,207,1) 70%,rgba(181,149,208,1) 80%,rgba(251,148,207,1) 90%,rgba(181,149,208,1) 100%)" data-rgba=""></span>
 				</section>
 			</div>
+			<div class="hexrgb"></div>
 		</span>
 	</body>
 	<script type="text/javascript">
@@ -325,11 +327,12 @@
 
 		function readCode(e) {
 			if ( e.target.tagName === 'SPAN' ) {
-			colorHex.innerText = e.target.getAttribute('data-hex');
-			colorRGB.innerText = e.target.getAttribute('data-rgba');
-			Array.from(colorSection).forEach(section => { var colorSpan = section.querySelectorAll('span'); Array.from(colorSpan).forEach(span => { span.classList.remove('box-Shine') }) });
-			e.target.classList.add('box-Shine');
-			document.body.setAttribute('style',`background:${e.target.getAttribute('data-hex')}`);
+				colorHex.innerText = e.target.getAttribute('data-hex');
+				colorRGB.innerText = e.target.getAttribute('data-rgba');
+				if ( e.target.parentElement.className == 'color-Section color-Gradient flex-ColumnWrap' ) { colorRGB.parentElement.style.display ='none' } else { colorRGB.parentElement.style.display ='flex' }
+				Array.from(colorSection).forEach(section => { var colorSpan = section.querySelectorAll('span'); Array.from(colorSpan).forEach(span => { span.classList.remove('box-Shine') }) });
+				e.target.classList.add('box-Shine');
+				document.body.setAttribute('style',`background:${e.target.getAttribute('data-hex')}`);
 			}
 		}
 		Array.from(colorSection).forEach(section => { section.addEventListener('click',readCode) });
@@ -342,6 +345,6 @@
 		colorHex.addEventListener('click',copyCode);
 		colorRGB.addEventListener('click',copyCode);
 
-//		console.log(e.target.innerText);
+//		console.log(e.target);
 	</script>
 </html>
