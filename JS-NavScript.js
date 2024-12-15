@@ -104,7 +104,7 @@
   .findVideo-Bar { flex:0 0 100%; padding:0.5em 0; width:100%; text-align:center; border:0; background-color:rgb(0 0 0/0.2); caret-color:Fuchsia; appearance:none }
 
 /* 佈局 pop-Box */
-  .pop-Box         { display:flex; flex-flow:row nowrap;    gap:0; position:fixed; margin:auto 0; padding:1em 0 1em 1em; left:13em; max-height:calc(100% - 2em); overflow:auto; border-radius:0.5em; background:linear-gradient(rgba(255,255,255,0.9),rgba(0,0,0,0.9)); backdrop-filter:blur(2px); box-shadow:0 0 10px 0.5em rgba(0,0,0,0.5); &:popover-open { transform:scaleY(1); opacity:1 }; transform:scaleY(0); opacity:0 }
+  .pop-Box         { display:flex; flex-flow:row nowrap;    gap:0; position:fixed; margin:auto 0; padding:1em 0 1em 1em; left:13em; max-height:calc(100% - 2em); overflow:auto; border-radius:0.5em; background-color: rgba(0,0,0,0.8); backdrop-filter:blur(3px); box-shadow:0 0 10px 0.5em rgba(0,0,0,0.5); &:popover-open { transform:scaleY(1); opacity:1 }; transform:scaleY(0); opacity:0 }
   .pop-rowBox      { display:flex; flex-flow:row nowrap;    gap:1em }
   .pop-colBox      { display:flex; flex-flow:column nowrap; gap:0 }
   .pop-Box section { display:flex; flex-flow:column wrap }
