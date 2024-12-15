@@ -533,10 +533,10 @@
       <a href="https://newtoypia.blogspot.com/2013/01/grub-gfxboot.html">WinPE改grub</a>
       <a href="https://www.twblogs.net/a/5b7dd4812b717768385416bb">WinPE案例</a>
       <a href="http://taiwin.blogspot.com/2013/07/pe.html">WinPE開機</a>
-      <a href="https://www.lizi.tw/pc/7490.html">制作WinPE</a>
-      <a href="https://blog.csdn.net/glc22/article/details/69388729/?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-1.base&spm=1001.2101.3001.4242">制作WinPE 0</a>
-      <a href="https://www.sysceo.com/Article-article_info-id-961.html">制作WinPE 1</a>
-      <a href="https://www.sysceo.com/Article-article_info-id-1144.html">制作WinPE 2</a>
+      <a href="https://www.lizi.tw/pc/7490.html">製作WinPE</a>
+      <a href="https://blog.csdn.net/glc22/article/details/69388729/?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-1.base&spm=1001.2101.3001.4242">製作WinPE 0</a>
+      <a href="https://www.sysceo.com/Article-article_info-id-961.html">製作WinPE 1</a>
+      <a href="https://www.sysceo.com/Article-article_info-id-1144.html">製作WinPE 2</a>
 		</section>
 	</article>
 </div>
@@ -553,7 +553,7 @@
       <a href="https://uiverse.io/elements">UIverse<topic>開源 UI 元素模板</topic></a>
       <a href="https://cssgenerator.pl/">CSS 產生器<topic>陰影、漸變、變形、按鈕、FlexBox</topic></a>
       <a href="https://blog.tarswork.com/post/a-selection-of-cool-css-button-effects">按鈕動畫<topic>模板</topic></a>
-      <a href="https://pk007sheep.github.io/cssSelectors.html">選擇器表<topic>Selectors</topic></a>
+      <a href="https://pk007sheep.github.io/CSS-Selectors.html">選擇器表<topic>Selectors</topic></a>
       <a href="https://www.toolfk.com/zh-tw/tools/format-css.html">格式化工具<topic>校驗、壓縮、加解密</topic></a>
 		  <hr class="hrPurple"/>
       <p>HTML</p>
@@ -578,8 +578,8 @@
       <a href="https://tw.piliapp.com/cool-text/small-caps/">SmallCaps<topic>小型大寫字母</topic></a>
       <a href="https://fontawesome.com">Font Awesome<topic>文字圖示庫</topic></a>
 		  <hr class="hrPurple"/>
-      <p>顔色<tips>HTML Color</tips></p>
-      <a href="https://pk007sheep.github.io/htmlColor.html">HTML 顔色代碼<topic>代碼表</topic></a>
+      <p>顏色<tips>HTML Color</tips></p>
+      <a href="https://pk007sheep.github.io/HTML-Color.html">HTML 顏色代碼<topic>代碼表</topic></a>
 		  <hr class="hrPurple"/>
       <p>代碼測試</p>
       <a href="https://codepen.io/pk007sheep/pen/wBwvJgQ">CodePen<topic>CSS 為主</topic></a>
